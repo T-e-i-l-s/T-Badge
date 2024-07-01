@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F022C32EF2A00044B79 /* AppDelegate.swift */; };
+		528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F042C32EF2A00044B79 /* SceneDelegate.swift */; };
+		528D8F0C2C32EF2D00044B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528D8F0B2C32EF2D00044B79 /* Assets.xcassets */; };
+		528D8F0F2C32EF2D00044B79 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 528D8F0E2C32EF2D00044B79 /* Base */; };
+		528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F192C32F28C00044B79 /* FlowCoordinator.swift */; };
+		528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1B2C32F2BF00044B79 /* AppCoordinator.swift */; };
+		528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */; };
+		528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F212C32F5D000044B79 /* AuthManager.swift */; };
+		528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F252C32F76F00044B79 /* LoginPresenter.swift */; };
+		528D8F2A2C32F76F00044B79 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F262C32F76F00044B79 /* LoginRouter.swift */; };
+		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
+		528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F282C32F76F00044B79 /* LoginAssembly.swift */; };
+		528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */; };
+		528D8F342C32F7AE00044B79 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F302C32F7AE00044B79 /* HomeRouter.swift */; };
+		528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F312C32F7AE00044B79 /* HomeViewController.swift */; };
+		528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F322C32F7AE00044B79 /* HomeAssembly.swift */; };
+		528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F382C32F8CE00044B79 /* BadgePresenter.swift */; };
+		528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F392C32F8CE00044B79 /* BadgeRouter.swift */; };
+		528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */; };
+		528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		528D8EFF2C32EF2A00044B79 /* T-Badge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T-Badge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528D8F022C32EF2A00044B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		528D8F042C32EF2A00044B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		528D8F0B2C32EF2D00044B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		528D8F0E2C32EF2D00044B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		528D8F102C32EF2D00044B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528D8F192C32F28C00044B79 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		528D8F1B2C32F2BF00044B79 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemble.swift; sourceTree = "<group>"; };
+		528D8F212C32F5D000044B79 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		528D8F252C32F76F00044B79 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		528D8F262C32F76F00044B79 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		528D8F282C32F76F00044B79 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		528D8F302C32F7AE00044B79 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		528D8F312C32F7AE00044B79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		528D8F322C32F7AE00044B79 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		528D8F382C32F8CE00044B79 /* BadgePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgePresenter.swift; sourceTree = "<group>"; };
+		528D8F392C32F8CE00044B79 /* BadgeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeRouter.swift; sourceTree = "<group>"; };
+		528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
+		528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeAssembly.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528D8EFC2C32EF2A00044B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528D8EF62C32EF2A00044B79 = {
+			isa = PBXGroup;
+			children = (
+				528D8F012C32EF2A00044B79 /* T-Badge */,
+				528D8F002C32EF2A00044B79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528D8F002C32EF2A00044B79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528D8EFF2C32EF2A00044B79 /* T-Badge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528D8F012C32EF2A00044B79 /* T-Badge */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F162C32F03300044B79 /* Aplication */,
+				528D8F202C32F5B700044B79 /* Managers */,
+				528D8F172C32F04200044B79 /* Controllers */,
+				528D8F182C32F04D00044B79 /* Other */,
+			);
+			path = "T-Badge";
+			sourceTree = "<group>";
+		};
+		528D8F162C32F03300044B79 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F022C32EF2A00044B79 /* AppDelegate.swift */,
+				528D8F042C32EF2A00044B79 /* SceneDelegate.swift */,
+				528D8F1F2C32F2FB00044B79 /* Navigation */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		528D8F172C32F04200044B79 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F232C32F74200044B79 /* MainFlow */,
+				528D8F242C32F74800044B79 /* LoginFlow */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		528D8F182C32F04D00044B79 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F0B2C32EF2D00044B79 /* Assets.xcassets */,
+				528D8F0D2C32EF2D00044B79 /* LaunchScreen.storyboard */,
+				528D8F102C32EF2D00044B79 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		528D8F1F2C32F2FB00044B79 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F192C32F28C00044B79 /* FlowCoordinator.swift */,
+				528D8F1B2C32F2BF00044B79 /* AppCoordinator.swift */,
+				528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		528D8F202C32F5B700044B79 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F212C32F5D000044B79 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		528D8F232C32F74200044B79 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F2E2C32F79300044B79 /* HomeModule */,
+				528D8F372C32F8B800044B79 /* BadgeModule */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		528D8F242C32F74800044B79 /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F2D2C32F77300044B79 /* LoginModule */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		528D8F2D2C32F77300044B79 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F272C32F76F00044B79 /* LoginViewController.swift */,
+				528D8F252C32F76F00044B79 /* LoginPresenter.swift */,
+				528D8F262C32F76F00044B79 /* LoginRouter.swift */,
+				528D8F282C32F76F00044B79 /* LoginAssembly.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		528D8F2E2C32F79300044B79 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F312C32F7AE00044B79 /* HomeViewController.swift */,
+				528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */,
+				528D8F302C32F7AE00044B79 /* HomeRouter.swift */,
+				528D8F322C32F7AE00044B79 /* HomeAssembly.swift */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		528D8F372C32F8B800044B79 /* BadgeModule */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F382C32F8CE00044B79 /* BadgePresenter.swift */,
+				528D8F392C32F8CE00044B79 /* BadgeRouter.swift */,
+				528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */,
+				528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */,
+			);
+			path = BadgeModule;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528D8EFE2C32EF2A00044B79 /* T-Badge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528D8F132C32EF2D00044B79 /* Build configuration list for PBXNativeTarget "T-Badge" */;
+			buildPhases = (
+				528D8EFB2C32EF2A00044B79 /* Sources */,
+				528D8EFC2C32EF2A00044B79 /* Frameworks */,
+				528D8EFD2C32EF2A00044B79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "T-Badge";
+			productName = "T-Badge";
+			productReference = 528D8EFF2C32EF2A00044B79 /* T-Badge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528D8EF72C32EF2A00044B79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					528D8EFE2C32EF2A00044B79 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 528D8EFA2C32EF2A00044B79 /* Build configuration list for PBXProject "T-Badge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528D8EF62C32EF2A00044B79;
+			productRefGroup = 528D8F002C32EF2A00044B79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528D8EFE2C32EF2A00044B79 /* T-Badge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528D8EFD2C32EF2A00044B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528D8F0C2C32EF2D00044B79 /* Assets.xcassets in Resources */,
+				528D8F0F2C32EF2D00044B79 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528D8EFB2C32EF2A00044B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
+				528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */,
+				528D8F2A2C32F76F00044B79 /* LoginRouter.swift in Sources */,
+				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
+				528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */,
+				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
+				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
+				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
+				528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */,
+				528D8F342C32F7AE00044B79 /* HomeRouter.swift in Sources */,
+				528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */,
+				528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */,
+				528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */,
+				528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */,
+				528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */,
+				528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */,
+				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
+				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		528D8F0D2C32EF2D00044B79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528D8F0E2C32EF2D00044B79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		528D8F112C32EF2D00044B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		528D8F122C32EF2D00044B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528D8F142C32EF2D00044B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YJ26SYSQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "T-Badge/Other/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyaluk.T-Badge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		528D8F152C32EF2D00044B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YJ26SYSQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "T-Badge/Other/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyaluk.T-Badge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528D8EFA2C32EF2A00044B79 /* Build configuration list for PBXProject "T-Badge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528D8F112C32EF2D00044B79 /* Debug */,
+				528D8F122C32EF2D00044B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528D8F132C32EF2D00044B79 /* Build configuration list for PBXNativeTarget "T-Badge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528D8F142C32EF2D00044B79 /* Debug */,
+				528D8F152C32EF2D00044B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528D8EF72C32EF2A00044B79 /* Project object */;
+}
