@@ -181,9 +181,9 @@
 		528D8F372C32F8B800044B79 /* BadgeModule */ = {
 			isa = PBXGroup;
 			children = (
+				528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */,
 				528D8F382C32F8CE00044B79 /* BadgePresenter.swift */,
 				528D8F392C32F8CE00044B79 /* BadgeRouter.swift */,
-				528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */,
 				528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */,
 			);
 			path = BadgeModule;

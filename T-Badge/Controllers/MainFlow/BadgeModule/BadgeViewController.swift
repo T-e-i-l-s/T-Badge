@@ -15,6 +15,8 @@ protocol BadgeViewProtocol: AnyObject {
 // MARK: - View Controller
 final class BadgeViewController: UIViewController {
     
+    // UI
+    
     var presenter: BadgePresenterProtocol?
 
     override func viewDidLoad() {

@@ -15,6 +15,8 @@ protocol HomeViewProtocol: AnyObject {
 // MARK: - View Controller
 final class HomeViewController: UIViewController {
     
+    // UI
+    
     var presenter: HomePresenterProtocol?
 
     override func viewDidLoad() {

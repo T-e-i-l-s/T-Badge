@@ -15,6 +15,8 @@ protocol LoginViewProtocol: AnyObject {
 // MARK: - View Controller
 final class LoginViewController: UIViewController {
     
+    // UI
+    
     var presenter: LoginPresenterProtocol?
 
     override func viewDidLoad() {
