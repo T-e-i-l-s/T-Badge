@@ -1,24 +1,27 @@
+import Foundation
 import UIKit
-import SnapKit
 
 // MARK: - View Controller
-final class LoginViewController: UIViewController {
+final class SignInController: UIViewController {
     var user = UserInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap))
-        view.addGestureRecognizer(tapGesture)
         setupUI()
     }
     
-    @objc func handleScreenTap() {
-        view.endEditing(true)
-    }
+    lazy var backButton: UIButton = {
+        let b = UIButton(type: .system)
+        b.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        b.setTitle("Назад", for: .normal)
+        b.sizeToFit()
+        b.addTarget(self, action: #selector(cancelSignIn), for: .touchDown)
+        return b
+    }()
     
     lazy var titleLabel: UILabel = {
         let l = UILabel()
-        l.text = "Вход"
+        l.text = "Регистрация"
         l.textColor = .label
         l.font = .systemFont(ofSize: 28)
         return l
@@ -46,7 +49,7 @@ final class LoginViewController: UIViewController {
     
     lazy var acceptButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Войти", for: .normal)
+        button.setTitle("Зарегистрировать", for: .normal)
         button.backgroundColor = .systemBlue
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         button.layer.cornerRadius = 50
@@ -60,46 +63,24 @@ final class LoginViewController: UIViewController {
         return button
     }()
     
-    lazy var registerView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [
-            noAccountLabel,
-            createAccountButton
-        ])
-        sv.axis = .horizontal
-        sv.alignment = .center
-        sv.spacing = 4
-        return sv
-    }()
-    
-    lazy var noAccountLabel: UILabel = {
-        let l = UILabel()
-        l.text = "Нет аккаунта?"
-        l.textColor = .label
-        l.font = .systemFont(ofSize: 16)
-        return l
-    }()
-    
-    lazy var createAccountButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Зарегистрироваться.", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(openSignInController), for: .touchDown)
-        return button
-    }()
-    
     private func setupUI() {
         view.backgroundColor = .systemBackground
         
+        view.addSubview(backButton)
         view.addSubview(titleLabel)
         view.addSubview(nameTextField)
         view.addSubview(passwordTextField)
         view.addSubview(acceptButton)
-        view.addSubview(registerView)
         
+        
+        backButton.snp.makeConstraints{ make in
+            make.leading.equalToSuperview().inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
+        }
         
         titleLabel.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
+            make.top.equalTo(backButton.snp.bottom).inset(-20)
         }
         
         nameTextField.snp.makeConstraints{ make in
@@ -112,14 +93,9 @@ final class LoginViewController: UIViewController {
             make.top.equalTo(nameTextField.snp.bottom).inset(-10)
         }
         
-        registerView.snp.makeConstraints{ make in
-            make.bottom.equalToSuperview().inset(20)
-            make.centerX.equalToSuperview()
-        }
-        
         acceptButton.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalTo(registerView.snp.top).inset(-20)
+            make.bottom.equalToSuperview().inset(20)
         }
     }
     
@@ -128,10 +104,7 @@ final class LoginViewController: UIViewController {
         print(user.name, user.password)
     }
     
-    @objc func openSignInController() {
-        let signInVC = SignInController()
-        signInVC.modalPresentationStyle = .fullScreen
-        present(signInVC, animated: true, completion: nil)
-        
+    @objc func cancelSignIn () {
+        self.dismiss(animated: true, completion: nil)
     }
 }
