@@ -15,9 +15,7 @@
 		528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1B2C32F2BF00044B79 /* AppCoordinator.swift */; };
 		528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */; };
 		528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F212C32F5D000044B79 /* AuthManager.swift */; };
-		528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F252C32F76F00044B79 /* LoginPresenter.swift */; };
 		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
-		528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F282C32F76F00044B79 /* LoginAssembly.swift */; };
 		528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */; };
 		528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F312C32F7AE00044B79 /* HomeViewController.swift */; };
 		528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F322C32F7AE00044B79 /* HomeAssembly.swift */; };
@@ -55,9 +53,7 @@
 		528D8F1B2C32F2BF00044B79 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemble.swift; sourceTree = "<group>"; };
 		528D8F212C32F5D000044B79 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		528D8F252C32F76F00044B79 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		528D8F282C32F76F00044B79 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		528D8F312C32F7AE00044B79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		528D8F322C32F7AE00044B79 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
@@ -99,7 +95,7 @@
 		528D8F012C32EF2A00044B79 /* T-Badge */ = {
 			isa = PBXGroup;
 			children = (
-				528D8F162C32F03300044B79 /* Aplication */,
+				528D8F162C32F03300044B79 /* Application */,
 				528D8F202C32F5B700044B79 /* Managers */,
 				528D8F402C36832B00044B79 /* Services&API */,
 				528D8F172C32F04200044B79 /* Controllers */,
@@ -108,14 +104,14 @@
 			path = "T-Badge";
 			sourceTree = "<group>";
 		};
-		528D8F162C32F03300044B79 /* Aplication */ = {
+		528D8F162C32F03300044B79 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				528D8F022C32EF2A00044B79 /* AppDelegate.swift */,
 				528D8F042C32EF2A00044B79 /* SceneDelegate.swift */,
 				528D8F1F2C32F2FB00044B79 /* Navigation */,
 			);
-			path = Aplication;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		528D8F172C32F04200044B79 /* Controllers */ = {
@@ -168,19 +164,9 @@
 		528D8F242C32F74800044B79 /* LoginFlow */ = {
 			isa = PBXGroup;
 			children = (
-				528D8F2D2C32F77300044B79 /* LoginModule */,
+				528D8F272C32F76F00044B79 /* LoginViewController.swift */,
 			);
 			path = LoginFlow;
-			sourceTree = "<group>";
-		};
-		528D8F2D2C32F77300044B79 /* LoginModule */ = {
-			isa = PBXGroup;
-			children = (
-				528D8F272C32F76F00044B79 /* LoginViewController.swift */,
-				528D8F252C32F76F00044B79 /* LoginPresenter.swift */,
-				528D8F282C32F76F00044B79 /* LoginAssembly.swift */,
-			);
-			path = LoginModule;
 			sourceTree = "<group>";
 		};
 		528D8F2E2C32F79300044B79 /* HomeModule */ = {
@@ -289,9 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
-				528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
-				528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,

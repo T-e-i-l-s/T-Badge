@@ -1,20 +1,27 @@
-//
-//  LoginViewController.swift
-//  Super easy dev
-//
-//  Created by vanyaluk on 01.07.2024
-//
-
 import UIKit
 import SnapKit
 
-// MARK: - View Protocol
-protocol LoginViewProtocol: AnyObject {
-    
+class UserInfo {
+    var name: String = ""
+    var password: String = ""
 }
 
 // MARK: - View Controller
-final class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, UITextFieldDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap))
+        view.addGestureRecognizer(tapGesture)
+        setupUI()
+    }
+    
+    @objc func handleScreenTap() {
+        view.endEditing(true)
+    }
+    
+    // UI
+    
+    var user = UserInfo()
     
     lazy var titleLabel: UILabel = {
         let l = UILabel()
@@ -24,7 +31,7 @@ final class LoginViewController: UIViewController {
         return l
     }()
     
-    lazy var nameTextField: UITextField = {
+    @objc lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Логин"
         tf.backgroundColor = .secondarySystemBackground
@@ -41,6 +48,7 @@ final class LoginViewController: UIViewController {
         tf.textColor = .label
         tf.font = .systemFont(ofSize: 19)
         tf.borderStyle = .roundedRect
+        tf.delegate = self
         return tf
     }()
     
@@ -54,6 +62,8 @@ final class LoginViewController: UIViewController {
         var configuration = UIButton.Configuration.filled()
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
         button.configuration = configuration
+        
+        button.addTarget(self, action: #selector(loginButtonClick), for: .touchDown)
         
         return button
     }()
@@ -83,14 +93,6 @@ final class LoginViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         return button
     }()
-
-    var presenter: LoginPresenterProtocol?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        presenter?.viewDidLoaded()
-    }
     
     private func setupUI() {
         view.backgroundColor = .systemBackground
@@ -127,9 +129,19 @@ final class LoginViewController: UIViewController {
             make.bottom.equalTo(registerView.snp.top).inset(-20)
         }
     }
-}
-
-// MARK: - View Protocol Realization
-extension LoginViewController: LoginViewProtocol {
     
+    @objc func loginButtonClick () {
+        // TODO: Check account
+        print(user.name, user.password)
+    }
+    
+//    func nameTextField(_ textField: UITextField) -> Bool {
+//        user.password = textField.text!
+//        return true
+//    }
+//    
+//    func passwordTextField(_ textField: UITextField) -> Bool {
+//        user.password = textField.text!
+//        return true
+//    }
 }

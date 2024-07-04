@@ -26,7 +26,7 @@ final class AppCoordinator: FlowCoordinator {
         case .auth:
             window?.rootViewController = HomeAssembly(authManager: authManager, networkService: networkService).assemble()
         case .notAuth:
-            window?.rootViewController = LoginAssembly(authManager: authManager, networkService: networkService).assemble()
+            window?.rootViewController = LoginViewController()
         }
     }
 }
