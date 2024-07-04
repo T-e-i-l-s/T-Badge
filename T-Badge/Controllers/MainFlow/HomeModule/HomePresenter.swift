@@ -28,6 +28,9 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     func viewDidLoaded() {
-        // first setup view
+        // подгрузка контента
+        // ... word
+        authManager.changeStatus(.auth)
+        view?.showInformation(word: "")
     }
 }
