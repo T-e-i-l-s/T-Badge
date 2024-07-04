@@ -12,18 +12,21 @@ final class AppCoordinator: FlowCoordinator {
     private weak var window: UIWindow?
     
     private let authManager: AuthManager
+    private let networkService: NetworkService
     
-    init(window: UIWindow?, authManager: AuthManager) {
+    init(window: UIWindow?, authManager: AuthManager, networkService: NetworkService) {
         self.window = window
         self.authManager = authManager
+        self.networkService = networkService
     }
+    
     
     func start() {
         switch authManager.getStatus() {
         case .auth:
-            window?.rootViewController = HomeAssembly().assemble()
+            window?.rootViewController = HomeAssembly(authManager: authManager, networkService: networkService).assemble()
         case .notAuth:
-            window?.rootViewController = LoginAssembly().assemble()
+            window?.rootViewController = LoginAssembly(authManager: authManager, networkService: networkService).assemble()
         }
     }
 }

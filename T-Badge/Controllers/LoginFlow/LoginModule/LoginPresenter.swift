@@ -14,10 +14,15 @@ protocol LoginPresenterProtocol: AnyObject {
 final class LoginPresenter {
     weak var view: LoginViewProtocol?
     var router: LoginRouterInput
+    
+    private let authManager: AuthManager
+    private let networkService: NetworkService
 
-    init(view: LoginViewProtocol, router: LoginRouterInput) {
+    init(view: LoginViewProtocol, router: LoginRouterInput, authManager: AuthManager, networkService: NetworkService) {
         self.view = view
         self.router = router
+        self.authManager = authManager
+        self.networkService = networkService
     }
 }
 

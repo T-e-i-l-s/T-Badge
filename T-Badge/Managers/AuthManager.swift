@@ -21,7 +21,7 @@ final class AuthManager {
     }
     
     private func checkAuth() {
-        
+        // TODO: запрос токена при регистрации
     }
     
     func getStatus() -> AuthStatus {

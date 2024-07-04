@@ -27,6 +27,8 @@
 		528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F392C32F8CE00044B79 /* BadgeRouter.swift */; };
 		528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */; };
 		528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */; };
+		528D8F422C36834300044B79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F412C36834300044B79 /* NetworkService.swift */; };
+		528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		528D8F392C32F8CE00044B79 /* BadgeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeRouter.swift; sourceTree = "<group>"; };
 		528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeAssembly.swift; sourceTree = "<group>"; };
+		528D8F412C36834300044B79 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		528D8F432C3685D000044B79 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			children = (
 				528D8F162C32F03300044B79 /* Aplication */,
 				528D8F202C32F5B700044B79 /* Managers */,
+				528D8F402C36832B00044B79 /* Services&API */,
 				528D8F172C32F04200044B79 /* Controllers */,
 				528D8F182C32F04D00044B79 /* Other */,
 			);
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				528D8F212C32F5D000044B79 /* AuthManager.swift */,
+				528D8F432C3685D000044B79 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -187,6 +193,14 @@
 				528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */,
 			);
 			path = BadgeModule;
+			sourceTree = "<group>";
+		};
+		528D8F402C36832B00044B79 /* Services&API */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F412C36834300044B79 /* NetworkService.swift */,
+			);
+			path = "Services&API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +279,7 @@
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
+				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
 				528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */,
@@ -274,6 +289,7 @@
 				528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */,
 				528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */,
 				528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */,
+				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
 				528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */,
 				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
 				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
