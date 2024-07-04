@@ -26,7 +26,23 @@
 		528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */; };
 		528D8F422C36834300044B79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F412C36834300044B79 /* NetworkService.swift */; };
 		528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* UserDefaultsManager.swift */; };
+		D434C4E12C36B64C007E9F75 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; };
+		D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D434C4E32C36B65B007E9F75 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		528D8EFF2C32EF2A00044B79 /* T-Badge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T-Badge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D434C4E12C36B64C007E9F75 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +221,16 @@
 				528D8EFB2C32EF2A00044B79 /* Sources */,
 				528D8EFC2C32EF2A00044B79 /* Frameworks */,
 				528D8EFD2C32EF2A00044B79 /* Resources */,
+				D434C4E32C36B65B007E9F75 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "T-Badge";
+			packageProductDependencies = (
+				D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */,
+			);
 			productName = "T-Badge";
 			productReference = 528D8EFF2C32EF2A00044B79 /* T-Badge.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 528D8EF62C32EF2A00044B79;
+			packageReferences = (
+				D434C4DF2C36B64C007E9F75 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 528D8F002C32EF2A00044B79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,7 +448,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8YJ26SYSQ5;
+				DEVELOPMENT_TEAM = 4TK4VKZGYL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "T-Badge/Other/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -437,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vanyaluk.T-Badge";
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Badg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -456,7 +480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8YJ26SYSQ5;
+				DEVELOPMENT_TEAM = 4TK4VKZGYL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "T-Badge/Other/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -469,7 +493,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vanyaluk.T-Badge";
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Badg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -503,6 +527,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D434C4DF2C36B64C007E9F75 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D434C4DF2C36B64C007E9F75 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 528D8EF72C32EF2A00044B79 /* Project object */;
 }
