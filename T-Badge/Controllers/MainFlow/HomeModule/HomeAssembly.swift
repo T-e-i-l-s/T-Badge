@@ -18,12 +18,10 @@ final class HomeAssembly {
     }
     
     func assemble() -> HomeViewController {
-        let router = HomeRouter()
         let viewController = HomeViewController()
-        let presenter = HomePresenter(view: viewController, router: router, authManager: authManager, networkService: networkService)
+        let presenter = HomePresenter(view: viewController, authManager: authManager, networkService: networkService)
         
         viewController.presenter = presenter
-        router.viewController = viewController
         
         return viewController
     }

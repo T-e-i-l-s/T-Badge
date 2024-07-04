@@ -13,14 +13,12 @@ protocol HomePresenterProtocol: AnyObject {
 
 final class HomePresenter {
     weak var view: HomeViewProtocol?
-    var router: HomeRouterInput
     
     private let authManager: AuthManager
     private let networkService: NetworkService
 
-    init(view: HomeViewProtocol, router: HomeRouterInput, authManager: AuthManager, networkService: NetworkService) {
+    init(view: HomeViewProtocol, authManager: AuthManager, networkService: NetworkService) {
         self.view = view
-        self.router = router
         self.authManager = authManager
         self.networkService = networkService
     }

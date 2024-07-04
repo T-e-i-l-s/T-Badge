@@ -16,15 +16,12 @@
 		528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */; };
 		528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F212C32F5D000044B79 /* AuthManager.swift */; };
 		528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F252C32F76F00044B79 /* LoginPresenter.swift */; };
-		528D8F2A2C32F76F00044B79 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F262C32F76F00044B79 /* LoginRouter.swift */; };
 		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
 		528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F282C32F76F00044B79 /* LoginAssembly.swift */; };
 		528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */; };
-		528D8F342C32F7AE00044B79 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F302C32F7AE00044B79 /* HomeRouter.swift */; };
 		528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F312C32F7AE00044B79 /* HomeViewController.swift */; };
 		528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F322C32F7AE00044B79 /* HomeAssembly.swift */; };
 		528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F382C32F8CE00044B79 /* BadgePresenter.swift */; };
-		528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F392C32F8CE00044B79 /* BadgeRouter.swift */; };
 		528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */; };
 		528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */; };
 		528D8F422C36834300044B79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F412C36834300044B79 /* NetworkService.swift */; };
@@ -43,15 +40,12 @@
 		528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemble.swift; sourceTree = "<group>"; };
 		528D8F212C32F5D000044B79 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		528D8F252C32F76F00044B79 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		528D8F262C32F76F00044B79 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		528D8F282C32F76F00044B79 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		528D8F302C32F7AE00044B79 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		528D8F312C32F7AE00044B79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		528D8F322C32F7AE00044B79 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		528D8F382C32F8CE00044B79 /* BadgePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgePresenter.swift; sourceTree = "<group>"; };
-		528D8F392C32F8CE00044B79 /* BadgeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeRouter.swift; sourceTree = "<group>"; };
 		528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeAssembly.swift; sourceTree = "<group>"; };
 		528D8F412C36834300044B79 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -167,7 +161,6 @@
 			children = (
 				528D8F272C32F76F00044B79 /* LoginViewController.swift */,
 				528D8F252C32F76F00044B79 /* LoginPresenter.swift */,
-				528D8F262C32F76F00044B79 /* LoginRouter.swift */,
 				528D8F282C32F76F00044B79 /* LoginAssembly.swift */,
 			);
 			path = LoginModule;
@@ -178,7 +171,6 @@
 			children = (
 				528D8F312C32F7AE00044B79 /* HomeViewController.swift */,
 				528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */,
-				528D8F302C32F7AE00044B79 /* HomeRouter.swift */,
 				528D8F322C32F7AE00044B79 /* HomeAssembly.swift */,
 			);
 			path = HomeModule;
@@ -189,7 +181,6 @@
 			children = (
 				528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */,
 				528D8F382C32F8CE00044B79 /* BadgePresenter.swift */,
-				528D8F392C32F8CE00044B79 /* BadgeRouter.swift */,
 				528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */,
 			);
 			path = BadgeModule;
@@ -275,7 +266,6 @@
 			files = (
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
 				528D8F292C32F76F00044B79 /* LoginPresenter.swift in Sources */,
-				528D8F2A2C32F76F00044B79 /* LoginRouter.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				528D8F2C2C32F76F00044B79 /* LoginAssembly.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
@@ -283,10 +273,8 @@
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
 				528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */,
-				528D8F342C32F7AE00044B79 /* HomeRouter.swift in Sources */,
 				528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */,
 				528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */,
-				528D8F3D2C32F8CE00044B79 /* BadgeRouter.swift in Sources */,
 				528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */,
 				528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */,
 				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
