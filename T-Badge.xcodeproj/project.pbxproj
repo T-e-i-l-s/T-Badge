@@ -26,6 +26,9 @@
 		D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
+		E05E6FF42C3867F70067B374 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E6FF32C3867F70067B374 /* UserModel.swift */; };
+		E05E6FF62C38684E0067B374 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E6FF52C38684E0067B374 /* EventModel.swift */; };
+		E05E6FF82C3869F30067B374 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E6FF72C3869F30067B374 /* AchievementModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +65,9 @@
 		D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserInfo.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
+		E05E6FF32C3867F70067B374 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E05E6FF52C38684E0067B374 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		E05E6FF72C3869F30067B374 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		528D8F012C32EF2A00044B79 /* T-Badge */ = {
 			isa = PBXGroup;
 			children = (
+				E05E6FF22C3867E30067B374 /* Models */,
 				528D8F162C32F03300044B79 /* Application */,
 				528D8F202C32F5B700044B79 /* Managers */,
 				528D8F402C36832B00044B79 /* Services&API */,
@@ -189,6 +196,16 @@
 			path = SignInFlow;
 			sourceTree = "<group>";
 		};
+		E05E6FF22C3867E30067B374 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E05E6FF32C3867F70067B374 /* UserModel.swift */,
+				E05E6FF52C38684E0067B374 /* EventModel.swift */,
+				E05E6FF72C3869F30067B374 /* AchievementModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,11 +288,14 @@
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
+				E05E6FF62C38684E0067B374 /* EventModel.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
+				E05E6FF82C3869F30067B374 /* AchievementModel.swift in Sources */,
 				D42F4EF72C37CA440085ECCA /* TabBarController.swift in Sources */,
 				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
 				D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */,
 				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
+				E05E6FF42C3867F70067B374 /* UserModel.swift in Sources */,
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
 				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,
