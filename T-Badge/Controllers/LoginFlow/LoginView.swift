@@ -10,8 +10,6 @@ final class LoginView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupUI()
-        setupTapGesture()
     }
     
     func setupTapGesture() {
@@ -85,6 +83,8 @@ final class LoginView: UIView {
     }()
     
     private func setupUI() {
+        backgroundColor = .systemBackground
+        
         addSubview(nameTextField)
         addSubview(passwordTextField)
         addSubview(acceptButton)
