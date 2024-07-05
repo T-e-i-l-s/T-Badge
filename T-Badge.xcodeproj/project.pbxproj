@@ -18,7 +18,6 @@
 		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
 		528D8F422C36834300044B79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F412C36834300044B79 /* NetworkService.swift */; };
 		528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* UserDefaultsManager.swift */; };
-		D42F4EF72C37CA440085ECCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EF62C37CA440085ECCA /* TabBarController.swift */; };
 		D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EF82C37F8020085ECCA /* LoginView.swift */; };
 		D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFA2C381CA90085ECCA /* SignInView.swift */; };
 		D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */; };
@@ -26,6 +25,10 @@
 		D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
+		D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F962C3883F7008F4D63 /* TabBarController.swift */; };
+		D4FF1F9C2C3883F7008F4D63 /* EventInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */; };
+		D4FF1F9D2C3883F7008F4D63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F992C3883F7008F4D63 /* HomeView.swift */; };
+		D4FF1F9E2C3883F7008F4D63 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F9A2C3883F7008F4D63 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,12 +59,15 @@
 		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		528D8F412C36834300044B79 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		528D8F432C3685D000044B79 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		D42F4EF62C37CA440085ECCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D42F4EF82C37F8020085ECCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D42F4EFA2C381CA90085ECCA /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserInfo.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
+		D4FF1F962C3883F7008F4D63 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "../../../../../../../Desktop/MainFlow copy/TabNavigation/TabBarController.swift"; sourceTree = "<group>"; };
+		D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoViewCell.swift; sourceTree = "<group>"; };
+		D4FF1F992C3883F7008F4D63 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D4FF1F9A2C3883F7008F4D63 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +162,7 @@
 		528D8F232C32F74200044B79 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
-				D42F4EF62C37CA440085ECCA /* TabBarController.swift */,
+				D4FF1F842C388395008F4D63 /* TabNavigation */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -187,6 +193,26 @@
 				D42F4EFA2C381CA90085ECCA /* SignInView.swift */,
 			);
 			path = SignInFlow;
+			sourceTree = "<group>";
+		};
+		D4FF1F842C388395008F4D63 /* TabNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF1F972C3883F7008F4D63 /* HomePage */,
+				D4FF1F962C3883F7008F4D63 /* TabBarController.swift */,
+			);
+			path = TabNavigation;
+			sourceTree = "<group>";
+		};
+		D4FF1F972C3883F7008F4D63 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */,
+				D4FF1F992C3883F7008F4D63 /* HomeView.swift */,
+				D4FF1F9A2C3883F7008F4D63 /* HomeViewController.swift */,
+			);
+			name = HomePage;
+			path = "../../../../../../../Desktop/MainFlow copy/TabNavigation/HomePage";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,14 +295,17 @@
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
+				D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */,
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
+				D4FF1F9E2C3883F7008F4D63 /* HomeViewController.swift in Sources */,
+				D4FF1F9D2C3883F7008F4D63 /* HomeView.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
-				D42F4EF72C37CA440085ECCA /* TabBarController.swift in Sources */,
 				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
 				D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */,
 				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
+				D4FF1F9C2C3883F7008F4D63 /* EventInfoViewCell.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
 				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,
 				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
