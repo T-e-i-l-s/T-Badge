@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthenticationService {
+final class AuthenticationService {
     func requestAuth(with password: String,
                      login: String,
                      completion: @escaping (ResultAuth) -> ()) {

@@ -7,6 +7,6 @@
 
 import UIKit
 
-final class NetworkService {
+final enum NetworkService {
     
 }

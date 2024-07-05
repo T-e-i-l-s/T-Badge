@@ -7,6 +7,6 @@
 
 import Foundation
 
-class UserService {
+final class UserService {
     
 }
