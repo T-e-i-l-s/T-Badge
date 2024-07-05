@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AchievementModel {
+struct AchievementModel: Codable, Hashable {
     var id: Int
     var title: String
     var description: String

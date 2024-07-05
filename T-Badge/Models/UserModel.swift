@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct UserModel {
-    var id: Int
-    var name: String
-    var status: String
-    var achievements: [AchievementModel]
-    var visitedPlaces: [EventModel]
+struct UserModel: Codable {
+    let id: Int
+    let name: String
+    let status: String
+    let achievements: [AchievementModel]
+    let visitedPlaces: [EventModel]
 }
