@@ -10,3 +10,8 @@ import Foundation
 protocol ServiceProtocol {
     var apiAddress: String { get }
 }
+
+enum ServiceError: Error {
+    case invalidURL
+    case missingData
+}

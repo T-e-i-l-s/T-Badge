@@ -33,6 +33,7 @@
 		E05E6FFD2C386B280067B374 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E6FFC2C386B280067B374 /* UserService.swift */; };
 		E05E6FFF2C386B340067B374 /* BadgeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E6FFE2C386B340067B374 /* BadgeService.swift */; };
 		E05E70012C38719D0067B374 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E70002C38719D0067B374 /* ServiceProtocol.swift */; };
+		E05E70032C3877990067B374 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05E70022C3877990067B374 /* AuthenticationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +77,7 @@
 		E05E6FFC2C386B280067B374 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E05E6FFE2C386B340067B374 /* BadgeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeService.swift; sourceTree = "<group>"; };
 		E05E70002C38719D0067B374 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		E05E70022C3877990067B374 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				E05E6FF32C3867F70067B374 /* UserModel.swift */,
 				E05E6FF52C38684E0067B374 /* EventModel.swift */,
 				E05E6FF72C3869F30067B374 /* AchievementModel.swift */,
+				E05E70022C3877990067B374 /* AuthenticationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
 				E05E6FFF2C386B340067B374 /* BadgeService.swift in Sources */,
 				E05E70012C38719D0067B374 /* ServiceProtocol.swift in Sources */,
+				E05E70032C3877990067B374 /* AuthenticationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,19 @@ final class AuthenticationService: ServiceProtocol {
     }
     
     func authenticate(login: String,
-                      password: String) async throws -> [UserModel]? {
-        return nil
+                      password: String) async throws -> AuthenticationModel {
+        guard let url = URL(string: apiAddress) else {
+            throw ServiceError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        let authenticationResult = try JSONDecoder().decode(
+            AuthenticationModel.self,
+            from: data
+        )
+        
+        return authenticationResult
     }
     
 //    func requestAuth(with password: String,
