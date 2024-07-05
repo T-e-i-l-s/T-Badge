@@ -7,6 +7,10 @@
 
 import Foundation
 
-final class UserService {
+final class UserService: ServiceProtocol {
+    let apiAddress: String
     
+    init(apiAddress: String) {
+        self.apiAddress = apiAddress
+    }
 }
