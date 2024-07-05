@@ -14,5 +14,5 @@ final class UserService: ServiceProtocol {
         self.apiAddress = apiAddress
     }
     
-    func getUser()
+//    func getUser()
 }
