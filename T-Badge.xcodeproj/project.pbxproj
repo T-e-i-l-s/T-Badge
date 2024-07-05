@@ -16,18 +16,16 @@
 		528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */; };
 		528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F212C32F5D000044B79 /* AuthManager.swift */; };
 		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
-		528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */; };
-		528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F312C32F7AE00044B79 /* HomeViewController.swift */; };
-		528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F322C32F7AE00044B79 /* HomeAssembly.swift */; };
-		528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F382C32F8CE00044B79 /* BadgePresenter.swift */; };
-		528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */; };
-		528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */; };
 		528D8F422C36834300044B79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F412C36834300044B79 /* NetworkService.swift */; };
 		528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* UserDefaultsManager.swift */; };
+		D42F4EF72C37CA440085ECCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EF62C37CA440085ECCA /* TabBarController.swift */; };
+		D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EF82C37F8020085ECCA /* LoginView.swift */; };
+		D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFA2C381CA90085ECCA /* SignInView.swift */; };
+		D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */; };
 		D434C4E12C36B64C007E9F75 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; };
 		D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
-		D4B0AE782C3705E8008435BF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* UserModel.swift */; };
+		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,16 +54,14 @@
 		528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemble.swift; sourceTree = "<group>"; };
 		528D8F212C32F5D000044B79 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		528D8F312C32F7AE00044B79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		528D8F322C32F7AE00044B79 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
-		528D8F382C32F8CE00044B79 /* BadgePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgePresenter.swift; sourceTree = "<group>"; };
-		528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
-		528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeAssembly.swift; sourceTree = "<group>"; };
 		528D8F412C36834300044B79 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		528D8F432C3685D000044B79 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D42F4EF62C37CA440085ECCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D42F4EF82C37F8020085ECCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D42F4EFA2C381CA90085ECCA /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserInfo.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
-		D4B0AE772C3705E8008435BF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +147,6 @@
 		528D8F202C32F5B700044B79 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				D4B0AE762C3705C1008435BF /* Models */,
 				528D8F212C32F5D000044B79 /* AuthManager.swift */,
 				528D8F432C3685D000044B79 /* UserDefaultsManager.swift */,
 			);
@@ -161,8 +156,7 @@
 		528D8F232C32F74200044B79 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
-				528D8F2E2C32F79300044B79 /* HomeModule */,
-				528D8F372C32F8B800044B79 /* BadgeModule */,
+				D42F4EF62C37CA440085ECCA /* TabBarController.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -170,29 +164,11 @@
 		528D8F242C32F74800044B79 /* LoginFlow */ = {
 			isa = PBXGroup;
 			children = (
+				D42F4EF82C37F8020085ECCA /* LoginView.swift */,
 				528D8F272C32F76F00044B79 /* LoginViewController.swift */,
+				D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */,
 			);
 			path = LoginFlow;
-			sourceTree = "<group>";
-		};
-		528D8F2E2C32F79300044B79 /* HomeModule */ = {
-			isa = PBXGroup;
-			children = (
-				528D8F312C32F7AE00044B79 /* HomeViewController.swift */,
-				528D8F2F2C32F7AE00044B79 /* HomePresenter.swift */,
-				528D8F322C32F7AE00044B79 /* HomeAssembly.swift */,
-			);
-			path = HomeModule;
-			sourceTree = "<group>";
-		};
-		528D8F372C32F8B800044B79 /* BadgeModule */ = {
-			isa = PBXGroup;
-			children = (
-				528D8F3A2C32F8CE00044B79 /* BadgeViewController.swift */,
-				528D8F382C32F8CE00044B79 /* BadgePresenter.swift */,
-				528D8F3B2C32F8CE00044B79 /* BadgeAssembly.swift */,
-			);
-			path = BadgeModule;
 			sourceTree = "<group>";
 		};
 		528D8F402C36832B00044B79 /* Services&API */ = {
@@ -207,16 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				D4B0AE742C3703EF008435BF /* SignInController.swift */,
+				D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */,
+				D42F4EFA2C381CA90085ECCA /* SignInView.swift */,
 			);
 			path = SignInFlow;
-			sourceTree = "<group>";
-		};
-		D4B0AE762C3705C1008435BF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D4B0AE772C3705E8008435BF /* UserModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,15 +272,13 @@
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
-				528D8F332C32F7AE00044B79 /* HomePresenter.swift in Sources */,
-				528D8F352C32F7AE00044B79 /* HomeViewController.swift in Sources */,
-				D4B0AE782C3705E8008435BF /* UserModel.swift in Sources */,
-				528D8F3C2C32F8CE00044B79 /* BadgePresenter.swift in Sources */,
-				528D8F3E2C32F8CE00044B79 /* BadgeViewController.swift in Sources */,
-				528D8F3F2C32F8CE00044B79 /* BadgeAssembly.swift in Sources */,
+				D42F4EF72C37CA440085ECCA /* TabBarController.swift in Sources */,
+				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
+				D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */,
 				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
-				528D8F362C32F7AE00044B79 /* HomeAssembly.swift in Sources */,
+				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
+				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,
 				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
 				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
 			);
@@ -469,7 +437,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Badg";
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Bad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -501,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Badg";
+				PRODUCT_BUNDLE_IDENTIFIER = "vanyalk.T-Bad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

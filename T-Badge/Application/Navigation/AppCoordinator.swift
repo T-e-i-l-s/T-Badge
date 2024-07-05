@@ -24,9 +24,9 @@ final class AppCoordinator: FlowCoordinator {
     func start() {
         switch authManager.getStatus() {
         case .auth:
-            window?.rootViewController = HomeAssembly(authManager: authManager, networkService: networkService).assemble()
+            window?.rootViewController = TabBarController()
         case .notAuth:
-            window?.rootViewController = LoginViewController()
+            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         }
     }
 }
