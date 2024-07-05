@@ -5,21 +5,19 @@ final class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-//        setupTapGesture()
+        setupTapGesture()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
-//        setupTapGesture()
+        setupTapGesture()
     }
     
     func setupTapGesture() {
         // WARN: Эта херня не работает, но она должна скрывать клаву когда юзер нажимает на экран после ввода
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.addGestureRecognizer(tapGesture)
-        
-        print("Setup gesture")
     }
     
     var user = LoginUserInfo()

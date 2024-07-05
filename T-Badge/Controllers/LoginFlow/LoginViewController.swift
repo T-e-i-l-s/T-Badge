@@ -19,6 +19,7 @@ final class LoginViewController: UIViewController {
         
         title = "Вход"
     }
+    
     @objc func dismissKeyboard() {
         
     }
@@ -26,7 +27,6 @@ final class LoginViewController: UIViewController {
 
     @objc func loginButtonClick() {
         // TODO: Add Login Logic
-        print(123)
     }
     
     @objc func openSignInController() {
