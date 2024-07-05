@@ -7,6 +7,10 @@
 
 import Foundation
 
-final class BadgeService {
+final class BadgeService: ServiceProtocol {
+    let apiAddress: String
     
+    init(apiAddress: String) {
+        self.apiAddress = apiAddress
+    }
 }
