@@ -21,6 +21,9 @@ final class LoginViewController: UIViewController {
 
     @objc func loginButtonClick() {
         // TODO: Add Login Logic
+        let tabBarController = TabBarController()
+        tabBarController.modalPresentationStyle = .fullScreen
+        present(tabBarController, animated: true)
     }
     
     @objc func openSignInController() {

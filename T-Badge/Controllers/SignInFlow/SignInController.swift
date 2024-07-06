@@ -23,5 +23,8 @@ final class SignInController: UIViewController {
     
     @objc func acceptButtonClick () {
         // TODO: Check account
+        let tabBarController = TabBarController()
+        tabBarController.modalPresentationStyle = .fullScreen
+        present(tabBarController, animated: true)
     }
 }
