@@ -1,4 +1,4 @@
-class LoginUserInfo {
+struct LoginUserInfo {
     var name: String = ""
     var password: String = ""
 }
