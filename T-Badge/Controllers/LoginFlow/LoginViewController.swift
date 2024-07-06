@@ -12,18 +12,12 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         
         rootView.acceptButton.addTarget(self, action: #selector(loginButtonClick), for: .touchUpInside)
         rootView.createAccountButton.addTarget(self, action: #selector(openSignInController), for: .touchUpInside)
         
         title = "Вход"
     }
-    
-    @objc func dismissKeyboard() {
-        
-    }
-    
 
     @objc func loginButtonClick() {
         // TODO: Add Login Logic
