@@ -13,7 +13,6 @@ final class LoginView: UIView {
     }
     
     func setupTapGesture() {
-        // WARN: Эта херня не работает, но она должна скрывать клаву когда юзер нажимает на экран после ввода
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.addGestureRecognizer(tapGesture)
     }

@@ -53,24 +53,18 @@ final class SelectModeView: UIView {
         
         container.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(20)
         }
         
         createNewEventButton.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(10)
             make.leading.trailing.equalToSuperview().inset(20)
         }
+        
         joinEventWithCodeButton.snp.makeConstraints { make in
             make.top.equalTo(createNewEventButton.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview().inset(20)
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // Обновляем размеры градиентного слоя с учетом размеров кнопки
-        if let gradientLayer = createNewEventButton.layer.sublayers?.first as? CAGradientLayer {
-            gradientLayer.frame = createNewEventButton.bounds
+            make.bottom.equalToSuperview().offset(-10)
         }
     }
 }

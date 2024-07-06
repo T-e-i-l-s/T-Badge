@@ -27,6 +27,8 @@
 		D487DB9E2C3931D300050EDF /* SelectModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487DB9D2C3931D300050EDF /* SelectModeView.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
+		D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */; };
+		D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D92C39724600DD35D3 /* CreateEventView.swift */; };
 		D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F962C3883F7008F4D63 /* TabBarController.swift */; };
 		D4FF1F9C2C3883F7008F4D63 /* EventInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */; };
 		D4FF1F9D2C3883F7008F4D63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F992C3883F7008F4D63 /* HomeView.swift */; };
@@ -68,6 +70,8 @@
 		D487DB9D2C3931D300050EDF /* SelectModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeView.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
+		D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		D4C122D92C39724600DD35D3 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		D4FF1F962C3883F7008F4D63 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "../../../../../../../Desktop/MainFlow copy/TabNavigation/TabBarController.swift"; sourceTree = "<group>"; };
 		D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoViewCell.swift; sourceTree = "<group>"; };
 		D4FF1F992C3883F7008F4D63 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		528D8F232C32F74200044B79 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				D4C122D62C39721D00DD35D3 /* CreateEventPage */,
 				D487DB9A2C39317200050EDF /* SelectModePage */,
 				D4FF1F842C388395008F4D63 /* TabNavigation */,
 			);
@@ -207,6 +212,15 @@
 				D42F4EFA2C381CA90085ECCA /* SignInView.swift */,
 			);
 			path = SignInFlow;
+			sourceTree = "<group>";
+		};
+		D4C122D62C39721D00DD35D3 /* CreateEventPage */ = {
+			isa = PBXGroup;
+			children = (
+				D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */,
+				D4C122D92C39724600DD35D3 /* CreateEventView.swift */,
+			);
+			path = CreateEventPage;
 			sourceTree = "<group>";
 		};
 		D4FF1F842C388395008F4D63 /* TabNavigation */ = {
@@ -309,6 +323,7 @@
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
 				D487DB9C2C3931BE00050EDF /* SelectModeViewController.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
+				D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
 				D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */,
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
@@ -323,6 +338,7 @@
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D4FF1F9C2C3883F7008F4D63 /* EventInfoViewCell.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
+				D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */,
 				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,
 				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
 				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
