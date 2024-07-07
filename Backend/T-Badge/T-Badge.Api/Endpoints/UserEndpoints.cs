@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using T_Badge.Common.Extensions;
 using T_Badge.Common.Interfaces.Authentication;
 using T_Badge.Contracts.Authentication.Requests;
 using T_Badge.Contracts.Authentication.Responses;
@@ -12,24 +13,36 @@ public static class UserEndpoints
 {
     public static RouteGroupBuilder MapUserEndpoints(this RouteGroupBuilder group)
     {
-        group.MapGet("/users", GetUsers).RequireAuthorization();
-        group.MapGet("/users/{id:int}", GetUser).RequireAuthorization();
-        group.MapPost("/users/login", SignIn);
-        group.MapPost("/users/register", SignUp);
+        group.MapGet("/", GetUsers).RequireAuthorization();
+        group.MapGet("/{id:int}", GetUser).RequireAuthorization();
+        group.MapPost("/login", SignIn);
+        group.MapPost("/register", SignUp);
 
         return group;
     }
     
     private static async Task<IResult> GetUsers(
-        [FromServices] ApplicationContext db)
+        HttpContext context,
+        [FromServices] ApplicationContext db,
+        ILogger<User> logger)
     {
+        var identity = context.GetIdentity();
+        
+        logger.LogInformation($"{identity.Username} requested users list.");
+        
         return Results.Ok(await db.Users.ToListAsync());
     }
     
     private static async Task<IResult> GetUser(
+        HttpContext context,
         [FromRoute] int id,
-        [FromServices] ApplicationContext db)
+        [FromServices] ApplicationContext db,
+        ILogger<User> logger)
     {
+        var identity = context.GetIdentity();
+        
+        logger.LogInformation($"{identity.Username} requested user with id {id}.");
+        
         return Results.Ok(await db.Users.FindAsync(id));
     }
     

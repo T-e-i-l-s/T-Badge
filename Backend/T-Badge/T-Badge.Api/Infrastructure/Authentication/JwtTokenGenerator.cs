@@ -26,19 +26,29 @@ public class JwtTokenGenerator(IOptions<JwtSettings> options) : IJwtTokenGenerat
         var claims = new[]
         {
             new Claim("sub", user.Id.ToString()),
-            new Claim("name", user.Name!)
+            new Claim("identity", user.Id.ToString()),
+            new Claim("name", user.Name),
+            new Claim("username", user.Username)
         };
         
-        var securityToken = tokenHandler.CreateJwtSecurityToken(
-            new SecurityTokenDescriptor
-            {
-                Issuer = _options.Issuer,
-                Audience = _options.Audience,
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddMinutes(_options.ExpiryMinutes),
-                SigningCredentials = signingCredentials
-            }
-        );
+        // TODO: Rewrite this shit.
+        // var securityToken = tokenHandler.CreateJwtSecurityToken(
+        //     new SecurityTokenDescriptor
+        //     {
+        //         Issuer = _options.Issuer,
+        //         Audience = _options.Audience,
+        //         Subject = new ClaimsIdentity(claims),
+        //         Expires = DateTime.UtcNow.AddMinutes(_options.ExpiryMinutes),
+        //         SigningCredentials = signingCredentials
+        //     }
+        // );
+        
+        var securityToken = new JwtSecurityToken(
+            issuer: _options.Issuer,
+            audience: _options.Audience,
+            expires: DateTime.UtcNow.AddMinutes(_options.ExpiryMinutes),
+            claims: claims,
+            signingCredentials: signingCredentials);
         
         return tokenHandler.WriteToken(securityToken);
     }
