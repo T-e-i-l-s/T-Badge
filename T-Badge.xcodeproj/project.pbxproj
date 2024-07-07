@@ -33,6 +33,8 @@
 		D4C122DF2C39B4E600DD35D3 /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122DE2C39B4E600DD35D3 /* EventInfoViewController.swift */; };
 		D4C122E22C39BA6200DD35D3 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122E12C39BA6200DD35D3 /* BadgeViewController.swift */; };
 		D4C122E42C39BA7500DD35D3 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122E32C39BA7500DD35D3 /* BadgeView.swift */; };
+		D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */; };
+		D4C6E8D82C3A807400CBA8E4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */; };
 		D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F962C3883F7008F4D63 /* TabBarController.swift */; };
 		D4FF1F9C2C3883F7008F4D63 /* EventInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */; };
 		D4FF1F9D2C3883F7008F4D63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1F992C3883F7008F4D63 /* HomeView.swift */; };
@@ -80,6 +82,8 @@
 		D4C122DE2C39B4E600DD35D3 /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		D4C122E12C39BA6200DD35D3 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		D4C122E32C39BA7500DD35D3 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D4FF1F962C3883F7008F4D63 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "../../../../../../../Desktop/MainFlow copy/TabNavigation/TabBarController.swift"; sourceTree = "<group>"; };
 		D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoViewCell.swift; sourceTree = "<group>"; };
 		D4FF1F992C3883F7008F4D63 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -251,9 +255,19 @@
 			path = BadgePage;
 			sourceTree = "<group>";
 		};
+		D4C6E8D42C3A804700CBA8E4 /* AccountPage */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */,
+				D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */,
+			);
+			path = AccountPage;
+			sourceTree = "<group>";
+		};
 		D4FF1F842C388395008F4D63 /* TabNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				D4C6E8D42C3A804700CBA8E4 /* AccountPage */,
 				D4FF1F972C3883F7008F4D63 /* HomePage */,
 				D4FF1F962C3883F7008F4D63 /* TabBarController.swift */,
 			);
@@ -352,10 +366,12 @@
 				D487DB9C2C3931BE00050EDF /* SelectModeViewController.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */,
+				D4C6E8D82C3A807400CBA8E4 /* AccountView.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
 				D4FF1F9B2C3883F7008F4D63 /* TabBarController.swift in Sources */,
 				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
 				D4FF1F9E2C3883F7008F4D63 /* HomeViewController.swift in Sources */,
+				D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */,
 				D4FF1F9D2C3883F7008F4D63 /* HomeView.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				D4C122E22C39BA6200DD35D3 /* BadgeViewController.swift in Sources */,
