@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T-Badge.Api", "T-Badge.Api\T-Badge.Api.csproj", "{2C670095-D667-48D9-A173-EEF9756E9399}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T-Badge.Contracts", "T-Badge.Contracts\T-Badge.Contracts.csproj", "{106BCA15-6DE8-4253-AF02-30D6A50AEFE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2C670095-D667-48D9-A173-EEF9756E9399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C670095-D667-48D9-A173-EEF9756E9399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C670095-D667-48D9-A173-EEF9756E9399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106BCA15-6DE8-4253-AF02-30D6A50AEFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106BCA15-6DE8-4253-AF02-30D6A50AEFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106BCA15-6DE8-4253-AF02-30D6A50AEFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106BCA15-6DE8-4253-AF02-30D6A50AEFE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

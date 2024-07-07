@@ -1,14 +1,19 @@
 using T_Badge;
-using T_Badge.Persistence;
+using T_Badge.Endpoints;
+using T_Badge.Infrastructure;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
 builder.Services
     .AddPresentation()
-    .AddPersistence(builder.Configuration);
+    .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
-app.Run();
+var api = app.MapGroup("/api");
 
-public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
+api
+    .MapGroup("/users")
+    .MapUserEndpoints();
+
+app.Run();
