@@ -5,6 +5,19 @@ import SnapKit
 final class LoginViewController: UIViewController {
     private lazy var rootView = view as! LoginView
     
+    private let authManager: AuthManager
+    private let updateAuth: () -> Void
+    
+    init(authManager: AuthManager, updateAuth: @escaping () -> Void) {
+        self.authManager = authManager
+        self.updateAuth = updateAuth
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         super.loadView()
         view = LoginView()
@@ -20,10 +33,8 @@ final class LoginViewController: UIViewController {
     }
 
     @objc func loginButtonClick() {
-        // TODO: Add Login Logic
-        let tabBarController = TabBarController()
-        tabBarController.modalPresentationStyle = .fullScreen
-        present(tabBarController, animated: true)
+        authManager.changeStatus(.auth)
+        updateAuth()
     }
     
     @objc func openSignInController() {

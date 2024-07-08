@@ -20,10 +20,10 @@ final class CreateEventView: UIView {
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Название"
-        tf.backgroundColor = .secondarySystemBackground
+        tf.backgroundColor = .tertiarySystemFill
         tf.textColor = .label
         tf.layer.borderWidth = 1.0
-        tf.layer.borderColor = UIColor.secondarySystemFill.cgColor
+        tf.layer.borderColor = UIColor.tertiarySystemFill.cgColor
         tf.font = .systemFont(ofSize: 19)
         tf.borderStyle = .roundedRect
         return tf
@@ -32,12 +32,12 @@ final class CreateEventView: UIView {
     lazy var descriptionTextView: UITextView = {
         let tv = UITextView()
         tv.text = "Описание"
-        tv.backgroundColor = .secondarySystemBackground
+        tv.backgroundColor = .tertiarySystemFill
         tv.textColor = .label
         tv.font = .systemFont(ofSize: 19)
         tv.layer.cornerRadius = 8.0
         tv.layer.borderWidth = 1.0
-        tv.layer.borderColor = UIColor.secondarySystemFill.cgColor
+        tv.layer.borderColor = UIColor.tertiarySystemFill.cgColor
         tv.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv

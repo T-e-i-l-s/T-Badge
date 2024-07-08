@@ -15,7 +15,6 @@ final class SignInView: UIView {
     }
     
     private func setupTapGesture() {
-        // WARN: Эта херня не работает, но она должна скрывать клаву когда юзер нажимает на экран после ввода
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.addGestureRecognizer(tapGesture)
     }
@@ -25,7 +24,7 @@ final class SignInView: UIView {
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Логин"
-        tf.backgroundColor = .secondarySystemBackground
+        tf.backgroundColor = .tertiarySystemFill
         tf.textColor = .label
         tf.font = .systemFont(ofSize: 19)
         tf.borderStyle = .roundedRect
@@ -35,7 +34,7 @@ final class SignInView: UIView {
     lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Пароль"
-        tf.backgroundColor = .secondarySystemBackground
+        tf.backgroundColor = .tertiarySystemFill
         tf.textColor = .label
         tf.font = .systemFont(ofSize: 19)
         tf.borderStyle = .roundedRect

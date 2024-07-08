@@ -26,7 +26,10 @@ final class AppCoordinator: FlowCoordinator {
         case .auth:
             window?.rootViewController = TabBarController()
         case .notAuth:
-            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+            let vc = LoginViewController(authManager: authManager) { [weak self] in
+                self?.start()
+            }
+            window?.rootViewController = UINavigationController(rootViewController: vc)
         }
     }
 }

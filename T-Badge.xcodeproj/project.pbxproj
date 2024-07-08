@@ -23,8 +23,6 @@
 		D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */; };
 		D434C4E12C36B64C007E9F75 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; };
 		D434C4E22C36B65B007E9F75 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D434C4E02C36B64C007E9F75 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D487DB9C2C3931BE00050EDF /* SelectModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487DB9B2C3931BE00050EDF /* SelectModeViewController.swift */; };
-		D487DB9E2C3931D300050EDF /* SelectModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487DB9D2C3931D300050EDF /* SelectModeView.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
 		D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */; };
@@ -72,8 +70,6 @@
 		D42F4EF82C37F8020085ECCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D42F4EFA2C381CA90085ECCA /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserInfo.swift; sourceTree = "<group>"; };
-		D487DB9B2C3931BE00050EDF /* SelectModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeViewController.swift; sourceTree = "<group>"; };
-		D487DB9D2C3931D300050EDF /* SelectModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeView.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
 		D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +181,6 @@
 				D4C122E02C39BA1400DD35D3 /* BadgePage */,
 				D4C122DB2C39B4B600DD35D3 /* EventInfoPage */,
 				D4C122D62C39721D00DD35D3 /* CreateEventPage */,
-				D487DB9A2C39317200050EDF /* SelectModePage */,
 				D4FF1F842C388395008F4D63 /* TabNavigation */,
 			);
 			path = MainFlow;
@@ -207,15 +202,6 @@
 				528D8F412C36834300044B79 /* NetworkService.swift */,
 			);
 			path = "Services&API";
-			sourceTree = "<group>";
-		};
-		D487DB9A2C39317200050EDF /* SelectModePage */ = {
-			isa = PBXGroup;
-			children = (
-				D487DB9B2C3931BE00050EDF /* SelectModeViewController.swift */,
-				D487DB9D2C3931D300050EDF /* SelectModeView.swift */,
-			);
-			path = SelectModePage;
 			sourceTree = "<group>";
 		};
 		D4B0AE732C3703B6008435BF /* SignInFlow */ = {
@@ -277,9 +263,9 @@
 		D4FF1F972C3883F7008F4D63 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */,
-				D4FF1F992C3883F7008F4D63 /* HomeView.swift */,
 				D4FF1F9A2C3883F7008F4D63 /* HomeViewController.swift */,
+				D4FF1F992C3883F7008F4D63 /* HomeView.swift */,
+				D4FF1F982C3883F7008F4D63 /* EventInfoViewCell.swift */,
 			);
 			name = HomePage;
 			path = "../../../../../../../Desktop/MainFlow copy/TabNavigation/HomePage";
@@ -363,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
-				D487DB9C2C3931BE00050EDF /* SelectModeViewController.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */,
 				D4C6E8D82C3A807400CBA8E4 /* AccountView.swift in Sources */,
@@ -377,7 +362,6 @@
 				D4C122E22C39BA6200DD35D3 /* BadgeViewController.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
 				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
-				D487DB9E2C3931D300050EDF /* SelectModeView.swift in Sources */,
 				D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */,
 				528D8F422C36834300044B79 /* NetworkService.swift in Sources */,
 				D4C122DD2C39B4D800DD35D3 /* EventInfoView.swift in Sources */,
