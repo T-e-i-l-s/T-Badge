@@ -14,7 +14,7 @@ enum AuthStatus {
 
 
 final class AuthManager {
-    private var status: AuthStatus = .auth
+    private var status: AuthStatus = .notAuth
     
     init() {
         checkAuth()

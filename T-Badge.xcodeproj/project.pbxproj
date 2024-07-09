@@ -153,9 +153,8 @@
 		528D8F172C32F04200044B79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D4B0AE732C3703B6008435BF /* SignInFlow */,
+				D44546722C3D680800E32C14 /* AuthFlow */,
 				528D8F232C32F74200044B79 /* MainFlow */,
-				528D8F242C32F74800044B79 /* LoginFlow */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +226,15 @@
 				D445466A2C3D562800E32C14 /* BadgeService.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		D44546722C3D680800E32C14 /* AuthFlow */ = {
+			isa = PBXGroup;
+			children = (
+				528D8F242C32F74800044B79 /* LoginFlow */,
+				D4B0AE732C3703B6008435BF /* SignInFlow */,
+			);
+			path = AuthFlow;
 			sourceTree = "<group>";
 		};
 		D4B0AE732C3703B6008435BF /* SignInFlow */ = {
