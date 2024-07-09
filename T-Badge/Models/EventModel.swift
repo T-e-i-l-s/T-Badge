@@ -13,5 +13,5 @@ struct EventModel: Codable, Hashable {
     var description: String
     var date: String
     var rating: Double
-    var location: String
+    var address: String
 }
