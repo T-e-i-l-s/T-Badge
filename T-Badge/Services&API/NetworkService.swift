@@ -14,7 +14,7 @@ enum ResultAuth {
 }
 
 final class NetworkService {
-    func requestAuth(with password: String, login: String, completion: @escaping (ResultAuth) -> ()) {
-        completion(.failed)
-    }
+//    func requestAuth(with password: String, login: String, completion: @escaping (ResultAuth) -> ()) {
+//        completion(.failed)
+//    }
 }

@@ -1,6 +1,4 @@
 import UIKit
-import SnapKit
-
 final class EventInfoView: UIView {
     private let event: EventModel
     
@@ -45,38 +43,32 @@ final class EventInfoView: UIView {
             make.edges.equalToSuperview()
         })
         
-        let containerView = UIView()
-        containerView.backgroundColor = .red
-        scrollView.addSubview(containerView)
-        containerView.snp.makeConstraints({ make in
-            make.edges.equalToSuperview()
-        })
-        
         let infoList = InfoList()
         infoList.configure(data: [
             "Описание": event.description,
             "Место": event.place,
             "Сроки": "\(event.start) - \(event.end)"
         ])
-        containerView.addSubview(infoList)
+        
+        scrollView.addSubview(infoList)
+        
         infoList.snp.makeConstraints({ make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.width.equalToSuperview().inset(17)
+            make.centerX.equalToSuperview()
         })
         
-//        containerView.addSubview(qrCodeContainer)
-//        qrCodeContainer.snp.makeConstraints({ make in
-//            make.top.equalTo(containerView.snp.bottom).offset(17)
-//            make.centerX.bottom.equalToSuperview().inset(17)
-//            make.width.height.equalTo(120)
-//            make.bottom.equalToSuperview().inset(14)
-//        })
-//        
-//        qrCodeContainer.addSubview(qrCodeImageView)
-//        qrCodeImageView.snp.makeConstraints({ make in
-//            make.width.height.equalTo(100)
-//            make.center.equalToSuperview()
-//        })
+        scrollView.addSubview(qrCodeContainer)
+        qrCodeContainer.snp.makeConstraints({ make in
+            make.top.equalTo(infoList.snp.bottom).offset(17)
+            make.width.height.equalTo(120)
+            make.centerX.equalToSuperview()
+        })
+        
+        qrCodeContainer.addSubview(qrCodeImageView)
+        qrCodeImageView.snp.makeConstraints({ make in
+            make.width.height.equalTo(100)
+            make.center.equalToSuperview()
+        })
     }
-
 }
-

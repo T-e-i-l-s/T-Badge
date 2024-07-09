@@ -4,6 +4,8 @@ import SnapKit
 final class InfoList: UIView, UITableViewDataSource, UITableViewDelegate {
     lazy var data: [String: String] = [:]
     
+    private var tableViewHeightConstraint: Constraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -16,19 +18,24 @@ final class InfoList: UIView, UITableViewDataSource, UITableViewDelegate {
     func configure(data: [String: String]) {
         self.data = data
         tableView.reloadData()
+        // Обновляем высоту таблицы после перезагрузки данных
+        DispatchQueue.main.async {
+            self.updateTableViewHeight()
+        }
     }
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
-        tv.backgroundColor = .white
         tv.sectionHeaderTopPadding = 0
         tv.dataSource = self
         tv.delegate = self
         tv.separatorStyle = .singleLine
         tv.rowHeight = UITableView.automaticDimension
+        tv.estimatedRowHeight = 44
+        tv.isScrollEnabled = false
         return tv
     }()
-
+    
     private func setupUI() {
         layer.cornerRadius = 17
         clipsToBounds = true
@@ -36,7 +43,16 @@ final class InfoList: UIView, UITableViewDataSource, UITableViewDelegate {
         addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+            self.tableViewHeightConstraint = make.height.equalTo(0).constraint
         }
+    }
+    
+    private func updateTableViewHeight() {
+        tableView.layoutIfNeeded()
+        let height = tableView.contentSize.height
+        tableViewHeightConstraint?.update(offset: height - 14)
+        self.layoutIfNeeded()
+        self.superview?.layoutIfNeeded()
     }
     
     // MARK: - UITableViewDataSource
@@ -51,11 +67,14 @@ final class InfoList: UIView, UITableViewDataSource, UITableViewDelegate {
         let keys = Array(data.keys)
         let values = Array(data.values)
         
+        cell.selectionStyle = .none
+        cell.isEditing = false
         cell.backgroundColor = .tertiarySystemFill
         cell.textLabel?.text = keys[indexPath.row]
         cell.detailTextLabel?.text = values[indexPath.row]
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        cell.textLabel?.textColor = .secondaryLabel
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return cell
     }
     
