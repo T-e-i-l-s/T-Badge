@@ -29,6 +29,8 @@
 		D445466F2C3D562800E32C14 /* BadgeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466A2C3D562800E32C14 /* BadgeService.swift */; };
 		D44546702C3D562800E32C14 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466B2C3D562800E32C14 /* NetworkService.swift */; };
 		D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466C2C3D562800E32C14 /* ServiceProtocol.swift */; };
+		D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546732C3D6C2700E32C14 /* AuthStubs.swift */; };
+		D44546842C3D94FB00E32C14 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546832C3D94FB00E32C14 /* DataCache.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
 		D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */; };
@@ -82,6 +84,8 @@
 		D445466A2C3D562800E32C14 /* BadgeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeService.swift; sourceTree = "<group>"; };
 		D445466B2C3D562800E32C14 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D445466C2C3D562800E32C14 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		D44546732C3D6C2700E32C14 /* AuthStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStubs.swift; sourceTree = "<group>"; };
+		D44546832C3D94FB00E32C14 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
 		D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			children = (
 				528D8F022C32EF2A00044B79 /* AppDelegate.swift */,
 				528D8F042C32EF2A00044B79 /* SceneDelegate.swift */,
+				D44546832C3D94FB00E32C14 /* DataCache.swift */,
 				528D8F1F2C32F2FB00044B79 /* Navigation */,
 			);
 			path = Application;
@@ -299,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E3FDE72C3C599F00CA785F /* EventsStubs.swift */,
+				D44546732C3D6C2700E32C14 /* AuthStubs.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -410,9 +416,11 @@
 				D441630A2C3C62EB00709BB6 /* InfoListSection.swift in Sources */,
 				D4C122DD2C39B4D800DD35D3 /* EventInfoView.swift in Sources */,
 				D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */,
+				D44546842C3D94FB00E32C14 /* DataCache.swift in Sources */,
 				D4E16CD92C3D44F6003057A1 /* HomeViewController.swift in Sources */,
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D44163082C3C606700709BB6 /* InfoList.swift in Sources */,
+				D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
 				D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */,
 				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,

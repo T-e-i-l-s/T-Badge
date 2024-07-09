@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 enum AuthStatus {
     case auth
     case notAuth
@@ -15,6 +16,8 @@ enum AuthStatus {
 
 final class AuthManager {
     private var status: AuthStatus = .notAuth
+    
+    lazy var cache = DataCache()
     
     init() {
         checkAuth()
@@ -25,10 +28,16 @@ final class AuthManager {
     }
     
     func getStatus() -> AuthStatus {
-        return status
+        let isAuth = UserDefaults.standard.bool(forKey: "isAuth")
+        if isAuth {
+            return .auth
+        } else {
+            return .notAuth
+        }
     }
     
     func changeStatus(_ newStatus: AuthStatus) {
+        UserDefaults.standard.setValue((newStatus == .auth), forKey: "isAuth")
         status = newStatus
     }
 }
