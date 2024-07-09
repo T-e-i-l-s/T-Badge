@@ -8,9 +8,6 @@ xcuserdata/
 ## Obj-C/Swift specific
 *.hmap
 
-.DS_Store
-*.DS_Store
-
 ## App packaging
 *.ipa
 *.dSYM.zip
@@ -21,16 +18,16 @@ timeline.xctimeline
 playground.xcworkspace
 
 # Swift Package Manager
-
+#
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-Packages/
-Package.pins
-Package.resolved
-*.xcodeproj
-
-Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-hence it is not needed unless you have added a package configuration file to your project
-.swiftpm
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+#
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
 
 .build/
 
@@ -62,15 +59,4 @@ Carthage/Build/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
-<<<<<<< Updated upstream
 fastlane/test_output
-
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
-=======
-fastlane/test_output
->>>>>>> Stashed changes
