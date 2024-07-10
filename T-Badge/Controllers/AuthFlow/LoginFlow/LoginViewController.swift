@@ -33,9 +33,9 @@ final class LoginViewController: UIViewController {
     }
 
     @objc func loginButtonClick() {
-        let name = rootView.nameTextField.text ?? ""
+        let username = rootView.nameTextField.text ?? ""
         let password = rootView.passwordTextField.text ?? ""
-        AuthStubs().checkAccess(name: name, password: password, result: { [weak self] token in
+        AuthStubs().checkAccess(username: username, password: password, result: { [weak self] token in
             if let token = token {
                 self?.authManager.changeStatus(.auth, token: token)
                 self?.updateAuth()

@@ -23,6 +23,16 @@ final class SignInView: UIView {
     
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
+        tf.placeholder = "Ваше имя"
+        tf.backgroundColor = .tertiarySystemFill
+        tf.textColor = .label
+        tf.font = .systemFont(ofSize: 19)
+        tf.borderStyle = .roundedRect
+        return tf
+    }()
+    
+    lazy var usernameTextField: UITextField = {
+        let tf = UITextField()
         tf.placeholder = "Логин"
         tf.backgroundColor = .tertiarySystemFill
         tf.textColor = .label
@@ -58,20 +68,25 @@ final class SignInView: UIView {
     private func setupUI() {
         backgroundColor = .systemBackground
         
-        addSubview(nameTextField)
-        addSubview(passwordTextField)
-        addSubview(acceptButton)
-        
-        nameTextField.snp.makeConstraints{ make in
+        addSubview(usernameTextField)
+        usernameTextField.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.centerY.equalToSuperview()
         }
         
-        passwordTextField.snp.makeConstraints{ make in
+        addSubview(nameTextField)
+        nameTextField.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(nameTextField.snp.bottom).inset(-10)
+            make.bottom.equalTo(usernameTextField.snp.top).offset(-10)
         }
         
+        addSubview(passwordTextField)
+        passwordTextField.snp.makeConstraints{ make in
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(usernameTextField.snp.bottom).inset(-10)
+        }
+        
+        addSubview(acceptButton)
         acceptButton.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(20)
