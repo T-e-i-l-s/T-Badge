@@ -35,17 +35,18 @@ final class SignInController: UIViewController {
         let password = rootView.passwordTextField.text ?? ""
         
         AuthStubs().createAccount(name: name, username: username, password: password, result: { [weak self] token in
-            if let token = token {
-                self?.authManager.changeStatus(.auth, token: token)
-                self?.updateAuth()
-            } else {
-                self?.showAlert()
+            DispatchQueue.main.async {
+                if token != nil {
+                    self?.authManager.changeStatus(.auth, token: token)
+                } else {
+                    self?.showAlert()
+                }
             }
         })
     }
     
     private func showAlert() {
-        let ac = UIAlertController(title: "Ошибка входа", message: "Неверный логин или пароль", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Ошибка регистрации", message: "Неверный формат данных", preferredStyle: .alert)
         let submitAction = UIAlertAction(title: "Понятно", style: .default)
         ac.addAction(submitAction)
         present(ac, animated: true)

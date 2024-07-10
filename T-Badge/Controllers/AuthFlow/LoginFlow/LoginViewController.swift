@@ -36,12 +36,13 @@ final class LoginViewController: UIViewController {
         let username = rootView.nameTextField.text ?? ""
         let password = rootView.passwordTextField.text ?? ""
         AuthStubs().checkAccess(username: username, password: password, result: { [weak self] token in
-            if let token = token {
-                self?.authManager.changeStatus(.auth, token: token)
-                self?.updateAuth()
-                print(token)
-            } else {
-                self?.showAlert()
+            DispatchQueue.main.async {
+                if let token = token {
+                    self?.authManager.changeStatus(.auth, token: token)
+                    self?.updateAuth()
+                } else {
+                    self?.showAlert()
+                }
             }
         })
     }
