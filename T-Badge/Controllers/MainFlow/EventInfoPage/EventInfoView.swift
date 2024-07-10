@@ -27,8 +27,11 @@ final class EventInfoView: UIView {
     }()
     
     lazy var qrCodeImageView: UIImageView = {
+        let currentTime = Date().timeIntervalSince1970
+        let isEnabled = event.start <= Int64(currentTime) && event.end >= Int64(currentTime)
+        
         let iv = UIImageView()
-        let image = UIImage(named: "qr")
+        let image = UIImage(named: isEnabled ? "enabledQR" : "disabledQR")
         let tintedimage = image?.withRenderingMode(.alwaysTemplate)
         iv.image = tintedimage
         iv.tintColor = .label
@@ -61,13 +64,13 @@ final class EventInfoView: UIView {
         scrollView.addSubview(qrCodeContainer)
         qrCodeContainer.snp.makeConstraints({ make in
             make.top.equalTo(infoList.snp.bottom).offset(17)
-            make.width.height.equalTo(120)
+            make.width.height.equalTo(170)
             make.centerX.equalToSuperview()
         })
         
         qrCodeContainer.addSubview(qrCodeImageView)
         qrCodeImageView.snp.makeConstraints({ make in
-            make.width.height.equalTo(100)
+            make.width.height.equalTo(150)
             make.center.equalToSuperview()
         })
     }
