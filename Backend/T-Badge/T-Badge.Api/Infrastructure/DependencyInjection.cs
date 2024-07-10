@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using T_Badge.Common.Interfaces.Authentication;
+using T_Badge.Common.Policies;
 using T_Badge.Infrastructure.Authentication;
 using T_Badge.Persistence;
 
@@ -53,7 +54,10 @@ public static class DependencyInjection
                 
             });
 
-        services.AddAuthorization();
+        services
+            .AddAuthorization()
+            .AddAuthorizationBuilder()
+            .AddAdminPolicy();
         
         return services;
     }

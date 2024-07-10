@@ -1,4 +1,5 @@
 ﻿using T_Badge.Contracts.Authentication.Responses;
+using T_Badge.Middlewares.Authentication;
 
 namespace T_Badge.Common.Extensions;
 
@@ -20,10 +21,10 @@ public static class HttpContextExtensions
         return false;
     }
 
-    public static AuthenticationResponse? GetIdentity(
+    public static AuthorizationMetadata? GetIdentity(
         this HttpContext context)
     {
-        return context.TryGet<AuthenticationResponse>(AuthenticationResponse.Key,
+        return context.TryGet<AuthorizationMetadata>(AuthorizationMetadata.Key,
             out var result)
             ? result
             : null;

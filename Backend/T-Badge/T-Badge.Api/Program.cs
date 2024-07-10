@@ -2,6 +2,7 @@ using T_Badge;
 using T_Badge.Endpoints;
 using T_Badge.Infrastructure;
 using T_Badge.Middlewares;
+using T_Badge.Middlewares.Authentication;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -18,5 +19,9 @@ var api = app.MapGroup("/api");
 api
     .MapGroup("/users")
     .MapUserEndpoints();
+
+api
+    .MapGroup("/events")
+    .MapEventEndpoints();
 
 app.Run();
