@@ -1,39 +1,15 @@
 import UIKit
 import SnapKit
-
-// Будем потом подгружать из апи
-struct AchievmentModel {
-    let image: String
-    let name: String
-    
-    init(image: String, name: String) {
-        self.image = image
-        self.name = name
+final class AccountView: UIView {
+    var userInfo: UserInfo = UserInfo(name: "", achievements: []) {
+        didSet {
+            updateUI()
+        }
     }
-}
-
-struct UserInfo {
-    let image = "profile_sample"
-    let name = "Иван Иванов"
-    let achievements = [
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош"),
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош"),
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош"),
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош"),
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош"),
-        AchievmentModel(image: "achievement1", name: "Чел хорош"),
-        AchievmentModel(image: "achievement2", name: "Чел мегахорош")
-    ]
-}
-
-final class AccountView: UIView{
-    lazy var userInfo = UserInfo()
+    
     private var collectionViewHeightConstraint: Constraint?
+    
+    private let achievmentsCollectionView = AchievementCollectionView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,7 +89,6 @@ final class AccountView: UIView{
         }
         
         accountIconBackground.addSubview(accountText)
-        accountText.text = userInfo.name.prefix(1).uppercased()
         accountText.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
@@ -137,14 +112,17 @@ final class AccountView: UIView{
             make.leading.trailing.top.equalToSuperview().inset(17)
         }
         
-        
-        let achievmentsCollectionView = AchievementCollectionView()
-        achievmentsCollectionView.configure(data: userInfo.achievements)
         achievementsView.addSubview(achievmentsCollectionView)
         achievmentsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(achievementsBlockTitle.snp.bottom).offset(14)
             make.bottom.equalToSuperview().inset(17)
             make.leading.trailing.equalToSuperview().inset(17)
         }
+    }
+    
+    private func updateUI() {
+        nameLabel.text = userInfo.name
+        accountText.text = userInfo.name.prefix(1).uppercased()
+        achievmentsCollectionView.configure(data: userInfo.achievements)
     }
 }

@@ -21,6 +21,12 @@ final class SignInView: UIView {
     
     var user = SignInUserInfo()
     
+    lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.hidesWhenStopped = true
+        return spinner
+    }()
+    
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Ваше имя"
@@ -90,6 +96,11 @@ final class SignInView: UIView {
         acceptButton.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview().inset(20)
+        }
+        
+        addSubview(spinner)
+        spinner.snp.makeConstraints{ make in
+            make.center.equalToSuperview()
         }
     }
     

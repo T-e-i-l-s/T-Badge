@@ -31,6 +31,7 @@
 		D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466C2C3D562800E32C14 /* ServiceProtocol.swift */; };
 		D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546732C3D6C2700E32C14 /* AuthStubs.swift */; };
 		D49756A42C3EC0F00074648D /* AchievementCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */; };
+		D49756A62C3F085B0074648D /* UserStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49756A52C3F085B0074648D /* UserStubs.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
 		D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */; };
@@ -86,6 +87,7 @@
 		D445466C2C3D562800E32C14 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		D44546732C3D6C2700E32C14 /* AuthStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStubs.swift; sourceTree = "<group>"; };
 		D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionView.swift; sourceTree = "<group>"; };
+		D49756A52C3F085B0074648D /* UserStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStubs.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
 		D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			children = (
 				D4E3FDE72C3C599F00CA785F /* EventsStubs.swift */,
 				D44546732C3D6C2700E32C14 /* AuthStubs.swift */,
+				D49756A52C3F085B0074648D /* UserStubs.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				D4E3FDE52C3C58FA00CA785F /* EventModel.swift in Sources */,
 				D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
+				D49756A62C3F085B0074648D /* UserStubs.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
 				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
 				D4E3FDE82C3C599F00CA785F /* EventsStubs.swift in Sources */,

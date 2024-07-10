@@ -19,6 +19,12 @@ final class LoginView: UIView {
     
     var user = LoginUserInfo()
     
+    lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.hidesWhenStopped = true
+        return spinner
+    }()
+    
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Логин"
@@ -109,6 +115,10 @@ final class LoginView: UIView {
             make.bottom.equalTo(registerView.snp.top).offset(-20)
         }
         
+        addSubview(spinner)
+        spinner.snp.makeConstraints{ make in
+            make.center.equalToSuperview()
+        }
     }
     
     @objc func dismissKeyboard() {
