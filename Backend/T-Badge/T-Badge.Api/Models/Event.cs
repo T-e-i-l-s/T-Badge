@@ -9,6 +9,7 @@ public class Event
     public string Description { get; set; }
     public string Location { get; set; }
     public double Rating { get; set; }
+    public User Author { get; set; }
     [JsonIgnore]
     public List<User> VisitedBy { get; set; } = [];
     public DateTime Start { get; set; }

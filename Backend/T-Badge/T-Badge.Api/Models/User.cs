@@ -15,6 +15,7 @@ public class User
     public Role Role { get; set; }
     public List<Achievement> Achievements { get; set; } = [];
     public List<Event> VisitedEvents { get; set; } = [];
+    public List<Event> CreatedEvents { get; set; } = [];
 }
 
 public enum Status

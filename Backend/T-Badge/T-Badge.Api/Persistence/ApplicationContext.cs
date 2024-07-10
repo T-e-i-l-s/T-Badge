@@ -18,6 +18,13 @@ public class ApplicationContext(DbContextOptions<ApplicationContext> options) : 
 
         modelBuilder
             .Entity<User>()
-            .OwnsMany(t => t.Achievements);
+            .OwnsMany(t => t.Achievements)
+            .WithOwner(t => t.Owner);
+
+        // TODO: Uncomment and make migrations.
+        modelBuilder
+            .Entity<Event>()
+            .HasOne(t => t.Author)
+            .WithMany(t => t.CreatedEvents);
     }
 }

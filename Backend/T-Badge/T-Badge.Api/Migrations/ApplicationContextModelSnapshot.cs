@@ -45,6 +45,9 @@ namespace T_Badge.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -67,6 +70,8 @@ namespace T_Badge.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
 
                     b.ToTable("Events");
                 });
@@ -117,6 +122,17 @@ namespace T_Badge.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("T_Badge.Models.Event", b =>
+                {
+                    b.HasOne("T_Badge.Models.User", "Author")
+                        .WithMany("CreatedEvents")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
             modelBuilder.Entity("T_Badge.Models.User", b =>
                 {
                     b.OwnsMany("T_Badge.Models.Achievement", "Achievements", b1 =>
@@ -131,24 +147,31 @@ namespace T_Badge.Migrations
                                 .IsRequired()
                                 .HasColumnType("text");
 
+                            b1.Property<int>("OwnerId")
+                                .HasColumnType("integer");
+
                             b1.Property<string>("Title")
                                 .IsRequired()
                                 .HasColumnType("text");
 
-                            b1.Property<int?>("UserId")
-                                .HasColumnType("integer");
-
                             b1.HasKey("Id");
 
-                            b1.HasIndex("UserId");
+                            b1.HasIndex("OwnerId");
 
                             b1.ToTable("Achievements");
 
-                            b1.WithOwner()
-                                .HasForeignKey("UserId");
+                            b1.WithOwner("Owner")
+                                .HasForeignKey("OwnerId");
+
+                            b1.Navigation("Owner");
                         });
 
                     b.Navigation("Achievements");
+                });
+
+            modelBuilder.Entity("T_Badge.Models.User", b =>
+                {
+                    b.Navigation("CreatedEvents");
                 });
 #pragma warning restore 612, 618
         }

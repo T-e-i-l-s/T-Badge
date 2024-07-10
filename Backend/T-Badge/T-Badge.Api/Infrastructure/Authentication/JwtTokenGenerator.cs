@@ -25,10 +25,10 @@ public class JwtTokenGenerator(IOptions<JwtSettings> options) : IJwtTokenGenerat
 
         var claims = new[]
         {
-            new Claim("sub", user.Id.ToString()),
-            new Claim("identity", user.Id.ToString()),
-            new Claim("name", user.Name),
-            new Claim("username", user.Username)
+            new Claim(ClaimTypes.Sid, user.Id.ToString()),
+            new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.Role, user.Role.ToString()),
+            new Claim(ClaimTypes.NameIdentifier, user.Username)
         };
         
         // TODO: Rewrite this shit.

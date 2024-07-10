@@ -1,7 +1,7 @@
-﻿using T_Badge.Contracts.Authentication.Responses;
+﻿using T_Badge.Models;
 using T_Badge.Persistence;
 
-namespace T_Badge.Middlewares;
+namespace T_Badge.Middlewares.Authentication;
 
 /// <summary>
 /// Fetch user's data from token's claims.
@@ -16,15 +16,16 @@ public class AuthenticationMiddleware(RequestDelegate next)
         if (!RequiresAuthorization(httpContext))
             goto skip;
 
-        var id = httpContext.User.FindFirst(AuthenticationResponse.IdClaim)?.Value;
-        var username = httpContext.User.FindFirst(AuthenticationResponse.UsernameClaim)?.Value;
-
+        var id = httpContext.User.FindFirst(AuthorizationMetadata.IdClaim)?.Value;
+        var username = httpContext.User.FindFirst(AuthorizationMetadata.UsernameClaim)?.Value;
+        var role = httpContext.User.FindFirst(AuthorizationMetadata.RoleClaim)?.Value!;
+        
         if (int.TryParse(id, out var userId) && !string.IsNullOrEmpty(username))
         {
-            var result = new AuthenticationResponse(
+            var result = new AuthorizationMetadata(
                 userId,
                 username,
-                string.Empty);
+                (Role) Enum.Parse(typeof(Role), role));
             
             AppendAuthenticationResult(httpContext, result);
         }
@@ -41,10 +42,10 @@ public class AuthenticationMiddleware(RequestDelegate next)
     // Append authentication result (user's fields) to HttpContext item collection.
     private static bool AppendAuthenticationResult(
         HttpContext context,
-        AuthenticationResponse result)
+        AuthorizationMetadata result)
     {
         context.Request.HttpContext.Items.Add(
-            AuthenticationResponse.Key,
+            AuthorizationMetadata.Key,
             result);
 
         return true;
