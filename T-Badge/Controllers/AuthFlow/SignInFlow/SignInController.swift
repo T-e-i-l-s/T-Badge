@@ -32,10 +32,15 @@ final class SignInController: UIViewController {
     @objc func acceptButtonClick () {
         let name = rootView.nameTextField.text ?? ""
         let password = rootView.passwordTextField.text ?? ""
-        AuthStubs().createAccount(name: name, password: password)
         
-        authManager.changeStatus(.auth)
-        updateAuth()
+        AuthStubs().createAccount(name: name, password: password, result: { [weak self] token in
+            if let token = token {
+                self?.authManager.changeStatus(.auth, token: token)
+                self?.updateAuth()
+            } else {
+                self?.showAlert()
+            }
+        })
     }
     
     private func showAlert() {

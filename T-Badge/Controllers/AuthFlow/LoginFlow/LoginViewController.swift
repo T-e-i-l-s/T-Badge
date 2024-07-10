@@ -35,12 +35,15 @@ final class LoginViewController: UIViewController {
     @objc func loginButtonClick() {
         let name = rootView.nameTextField.text ?? ""
         let password = rootView.passwordTextField.text ?? ""
-        if (AuthStubs().checkAccess(name: name, password: password)) {
-            authManager.changeStatus(.auth)
-            updateAuth()
-        } else {
-            showAlert()
-        }
+        AuthStubs().checkAccess(name: name, password: password, result: { [weak self] token in
+            if let token = token {
+                self?.authManager.changeStatus(.auth, token: token)
+                self?.updateAuth()
+                print(token)
+            } else {
+                self?.showAlert()
+            }
+        })
     }
     
     private func showAlert() {

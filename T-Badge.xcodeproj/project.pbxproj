@@ -16,7 +16,7 @@
 		528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */; };
 		528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F212C32F5D000044B79 /* AuthManager.swift */; };
 		528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F272C32F76F00044B79 /* LoginViewController.swift */; };
-		528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* UserDefaultsManager.swift */; };
+		528D8F442C3685D000044B79 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D8F432C3685D000044B79 /* KeychainManager.swift */; };
 		D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EF82C37F8020085ECCA /* LoginView.swift */; };
 		D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFA2C381CA90085ECCA /* SignInView.swift */; };
 		D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */; };
@@ -30,7 +30,7 @@
 		D44546702C3D562800E32C14 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466B2C3D562800E32C14 /* NetworkService.swift */; };
 		D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466C2C3D562800E32C14 /* ServiceProtocol.swift */; };
 		D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546732C3D6C2700E32C14 /* AuthStubs.swift */; };
-		D44546842C3D94FB00E32C14 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546832C3D94FB00E32C14 /* DataCache.swift */; };
+		D49756A42C3EC0F00074648D /* AchievementCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
 		D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */; };
 		D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */; };
@@ -73,7 +73,7 @@
 		528D8F1D2C32F2CB00044B79 /* AppAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemble.swift; sourceTree = "<group>"; };
 		528D8F212C32F5D000044B79 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		528D8F272C32F76F00044B79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		528D8F432C3685D000044B79 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		528D8F432C3685D000044B79 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		D42F4EF82C37F8020085ECCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D42F4EFA2C381CA90085ECCA /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		D42F4EFC2C381ED20085ECCA /* SignInUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUserInfo.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		D445466B2C3D562800E32C14 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D445466C2C3D562800E32C14 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		D44546732C3D6C2700E32C14 /* AuthStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStubs.swift; sourceTree = "<group>"; };
-		D44546832C3D94FB00E32C14 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionView.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		D4B0AE772C3705E8008435BF /* LoginUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInfo.swift; sourceTree = "<group>"; };
 		D4C122D72C39723700DD35D3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 			children = (
 				528D8F022C32EF2A00044B79 /* AppDelegate.swift */,
 				528D8F042C32EF2A00044B79 /* SceneDelegate.swift */,
-				D44546832C3D94FB00E32C14 /* DataCache.swift */,
 				528D8F1F2C32F2FB00044B79 /* Navigation */,
 			);
 			path = Application;
@@ -188,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				528D8F212C32F5D000044B79 /* AuthManager.swift */,
-				528D8F432C3685D000044B79 /* UserDefaultsManager.swift */,
+				528D8F432C3685D000044B79 /* KeychainManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -277,6 +276,7 @@
 			children = (
 				D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */,
 				D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */,
+				D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */,
 			);
 			path = AccountPage;
 			sourceTree = "<group>";
@@ -402,8 +402,9 @@
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */,
 				D4C6E8D82C3A807400CBA8E4 /* AccountView.swift in Sources */,
+				D49756A42C3EC0F00074648D /* AchievementCollectionView.swift in Sources */,
 				528D8F222C32F5D000044B79 /* AuthManager.swift in Sources */,
-				528D8F442C3685D000044B79 /* UserDefaultsManager.swift in Sources */,
+				528D8F442C3685D000044B79 /* KeychainManager.swift in Sources */,
 				D4E3FDE52C3C58FA00CA785F /* EventModel.swift in Sources */,
 				D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
@@ -416,7 +417,6 @@
 				D441630A2C3C62EB00709BB6 /* InfoListSection.swift in Sources */,
 				D4C122DD2C39B4D800DD35D3 /* EventInfoView.swift in Sources */,
 				D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */,
-				D44546842C3D94FB00E32C14 /* DataCache.swift in Sources */,
 				D4E16CD92C3D44F6003057A1 /* HomeViewController.swift in Sources */,
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D44163082C3C606700709BB6 /* InfoList.swift in Sources */,

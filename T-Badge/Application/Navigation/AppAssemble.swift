@@ -11,8 +11,8 @@ final class AppAssemble {
     static func assemble(window: UIWindow?) -> FlowCoordinator {
         
         // DI
-        let authManager = AuthManager()
         let networkService = NetworkService()
+        let authManager = AuthManager(networkService: networkService)
         
         let appCoordinator = AppCoordinator(window: window, authManager: authManager, networkService: networkService)
         return appCoordinator

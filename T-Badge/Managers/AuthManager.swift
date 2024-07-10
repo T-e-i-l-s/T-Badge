@@ -15,29 +15,42 @@ enum AuthStatus {
 
 
 final class AuthManager {
+    
+    private let networkService: NetworkService
+    
     private var status: AuthStatus = .notAuth
-    
-    lazy var cache = DataCache()
-    
-    init() {
+
+    init(networkService: NetworkService) {
+        self.networkService = networkService
         checkAuth()
     }
     
     private func checkAuth() {
-        // TODO: запрос токена при регистрации
-    }
-    
-    func getStatus() -> AuthStatus {
-        let isAuth = UserDefaults.standard.bool(forKey: "isAuth")
-        if isAuth {
-            return .auth
+        if KeychainManager.shared.getKey() != nil {
+            status = .auth
         } else {
-            return .notAuth
+            status = .notAuth
         }
     }
     
-    func changeStatus(_ newStatus: AuthStatus) {
-        UserDefaults.standard.setValue((newStatus == .auth), forKey: "isAuth")
-        status = newStatus
+    public func getStatus() -> AuthStatus {
+        return status
+    }
+    
+    public func changeStatus(_ newStatus: AuthStatus, token: String? = nil) {
+        switch newStatus {
+        case .auth:
+            if let token = token {
+                KeychainManager.shared.saveKey(token)
+                status = newStatus
+                // TODO: added key to network service
+                // networkService.token = ...
+            } else {
+                print("error AuthManager save key")
+            }
+        case .notAuth:
+            KeychainManager.shared.clearKey()
+            status = newStatus
+        }
     }
 }

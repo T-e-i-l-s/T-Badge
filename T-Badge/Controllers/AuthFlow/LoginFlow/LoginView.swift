@@ -112,8 +112,6 @@ final class LoginView: UIView {
     }
     
     @objc func dismissKeyboard() {
-        print("Dismiss keyboard")
-        
         self.endEditing(true)
     }
 }

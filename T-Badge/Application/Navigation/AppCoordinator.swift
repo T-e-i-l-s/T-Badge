@@ -22,9 +22,14 @@ final class AppCoordinator: FlowCoordinator {
     
     
     func start() {
+        if let window {
+            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
         switch authManager.getStatus() {
         case .auth:
-            window?.rootViewController = TabBarController()
+            window?.rootViewController = TabBarController(authManager: authManager) { [weak self] in
+                self?.start()
+            }
         case .notAuth:
             let vc = LoginViewController(authManager: authManager) { [weak self] in
                 self?.start()
