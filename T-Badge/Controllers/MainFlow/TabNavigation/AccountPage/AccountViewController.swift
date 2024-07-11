@@ -25,6 +25,7 @@ final class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        rootView.accountIconBackground.isHidden = true
         title = "Профиль"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.minus"), style: .plain, target: self, action: #selector(logoutButtonTap))
     }
@@ -44,7 +45,6 @@ final class AccountViewController: UIViewController {
             return
         }
         rootView.spinner.startAnimating()
-        rootView.accountIconBackground.isHidden = true
         
         UserStubs(authToken: token).getEvents(result: { [weak self] userInfo in
             DispatchQueue.main.async {

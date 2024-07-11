@@ -80,10 +80,9 @@ final class AccountView: UIView {
     lazy var emptyListLabel: UILabel = {
         let l = UILabel()
         l.text = "Нет достижений"
-        l.textColor = .label
-        l.numberOfLines = 0
         l.textAlignment = .center
-        l.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        l.textColor = .gray
+        l.isHidden = true
         return l
     }()
     
