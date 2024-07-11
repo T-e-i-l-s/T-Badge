@@ -29,9 +29,9 @@ final class SignInView: UIView {
     
     lazy var welcomeLabel: UILabel = {
         let l = UILabel()
-        l.text = "Рад знакомству 🤝"
+        l.text = "Заходи 🤝"
         l.textColor = .label
-        l.font = .systemFont(ofSize: 30, weight: .semibold)
+        l.font = .systemFont(ofSize: 42, weight: .semibold)
         l.textAlignment = .center
         return l
     }()

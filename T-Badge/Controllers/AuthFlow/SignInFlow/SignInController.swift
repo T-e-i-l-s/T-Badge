@@ -40,11 +40,10 @@ final class SignInController: UIViewController {
         AuthStubs().createAccount(name: name, username: username, password: password, result: { [weak self] token in
             DispatchQueue.main.async {
                 
-                self?.loadingFinish()
-                
                 if token != nil {
                     self?.loadingFinish()
                     self?.authManager.changeStatus(.auth, token: token)
+                    self?.updateAuth()
                 } else {
                     self?.showAlert()
                 }
@@ -54,27 +53,32 @@ final class SignInController: UIViewController {
     
     private func showAlert() {
         let ac = UIAlertController(title: "Ошибка регистрации", message: "Придумайте другие данные", preferredStyle: .alert)
-        let submitAction = UIAlertAction(title: "Понятно", style: .default)
+        let submitAction = UIAlertAction(title: "Понятно", style: .default) { [weak self] action in
+            self?.loadingFinish()
+        }
         ac.addAction(submitAction)
         present(ac, animated: true)
     }
     
     private func loadingStart() {
-        rootView.spinner.startAnimating()
-        rootView.nameTextField.isHidden = true
-        rootView.passwordTextField.isHidden = true
-        rootView.usernameTextField.isHidden = true
+        UIView.animate(withDuration: 0.2) {
+            self.rootView.nameTextField.alpha = 0
+            self.rootView.passwordTextField.alpha = 0
+            self.rootView.usernameTextField.alpha = 0
+        } completion: { done in
+            self.rootView.spinner.startAnimating()
+        }
         rootView.acceptButton.isEnabled = false
-        navigationItem.backBarButtonItem?.isEnabled = false
     }
     
     private func loadingFinish() {
         rootView.spinner.stopAnimating()
-        rootView.nameTextField.isHidden = false
-        rootView.passwordTextField.isHidden = false
-        rootView.usernameTextField.isHidden = false
+        UIView.animate(withDuration: 0.2) {
+            self.rootView.nameTextField.alpha = 1
+            self.rootView.passwordTextField.alpha = 1
+            self.rootView.usernameTextField.alpha = 1
+        }
         rootView.acceptButton.isEnabled = true
-        navigationItem.backBarButtonItem?.isEnabled = true
     }
     
 }
