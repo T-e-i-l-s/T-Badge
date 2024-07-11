@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 final class AccountView: UIView {
-    var userInfo: UserInfo = UserInfo(name: "", achievements: []) {
+    var userInfo: UserInfo = UserInfo(name: "", achievements: [], visitsCount: 0) {
         didSet {
             updateUI()
         }
@@ -87,6 +87,16 @@ final class AccountView: UIView {
         return l
     }()
     
+    lazy var visitsCountLabel: UILabel = {
+        let l = UILabel()
+        l.text = "\(userInfo.visitsCount) событий"
+        l.textColor = .label
+        l.numberOfLines = 0
+        l.textAlignment = .left
+        l.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        return l
+    }()
+    
     private func setupUI() {
         backgroundColor = .systemBackground
         
@@ -111,7 +121,14 @@ final class AccountView: UIView {
         
         userInfoView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-12)
+            make.leading.equalTo(accountIconBackground.snp.trailing).offset(14)
+            make.trailing.equalToSuperview().inset(14)
+        }
+        
+        userInfoView.addSubview(visitsCountLabel)
+        visitsCountLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().offset(12)
             make.leading.equalTo(accountIconBackground.snp.trailing).offset(14)
             make.trailing.equalToSuperview().inset(14)
         }
@@ -149,6 +166,8 @@ final class AccountView: UIView {
     private func updateUI() {
         nameLabel.text = userInfo.name
         accountText.text = userInfo.name.prefix(1).uppercased()
+        let count = userInfo.visitsCount
+        visitsCountLabel.text = "\(count) \(count == 1 ? "событие" : count >= 2 && count <= 4 ? "события" : "событий")"
         achievmentsCollectionView.configure(data: userInfo.achievements)
         
         if userInfo.achievements.isEmpty {

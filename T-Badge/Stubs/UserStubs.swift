@@ -16,7 +16,7 @@ class UserStubs {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")  // Добавляем токен в заголовок
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -30,14 +30,19 @@ class UserStubs {
                     do {
                         if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                             if let name = json["name"] as? String,
-                               let achievementsArray = json["achievements"] as? [[String: Any]] {
+                               let achievementsArray = json["achievements"] as? [[String: Any]],
+                               let visitedEventsArray = json["visitedEvents"] as? [[String: Any]] {
+                                   
+                                let visitsCount = visitedEventsArray.count
+
                                 let achievements = achievementsArray.compactMap { achievementDict -> AchievmentModel? in
                                     if let title = achievementDict["title"] as? String {
-                                        return AchievmentModel(image: title == "Новичок" ? "🥳" : title == "Бывалый" ? "🏆" : title == "Диванный эксперт" ? "🥸" : "😎", name: title)
+                                        return AchievmentModel(image: title == "Новичок" ? "🥳" : title == "Бывалый" ? "🏆" : title == "Tyler, The Creator" ? "🎤" : "😎", name: title)
                                     }
                                     return nil
                                 }
-                                result(UserInfo(name: name, achievements: achievements))
+
+                                result(UserInfo(name: name, achievements: achievements, visitsCount: visitsCount))
                             } else {
                                 result(nil)
                             }
@@ -71,9 +76,11 @@ struct AchievmentModel {
 struct UserInfo {
     let name: String
     let achievements: [AchievmentModel]
+    let visitsCount: Int
     
-    init (name: String, achievements: [AchievmentModel]) {
+    init (name: String, achievements: [AchievmentModel], visitsCount: Int) {
         self.name = name
         self.achievements = achievements
+        self.visitsCount = visitsCount
     }
 }

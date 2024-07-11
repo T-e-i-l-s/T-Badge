@@ -38,7 +38,7 @@ final class AchievementCollectionView: UIView, UICollectionViewDataSource, UICol
         addSubview(achievementsCollectionView)
         achievementsCollectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.height.equalTo(110)
+            make.height.equalTo(95)
         }
     }
     
@@ -58,7 +58,7 @@ final class AchievementCollectionView: UIView, UICollectionViewDataSource, UICol
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 110)
+        return CGSize(width: 80, height: 95)
     }
 }
 
