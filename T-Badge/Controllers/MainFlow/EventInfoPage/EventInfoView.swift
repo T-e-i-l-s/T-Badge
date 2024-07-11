@@ -153,6 +153,7 @@ final class EventInfoView: UIView {
         containerView.snp.makeConstraints { make in
             make.leading.trailing.equalTo(self).inset(14)
             make.top.equalToSuperview()
+            make.bottom.equalToSuperview().priority(.low) // Allow scrolling content
         }
                 
         containerView.addSubview(descriptionTitle)
@@ -253,7 +254,6 @@ final class EventInfoView: UIView {
         wifiLabel.snp.makeConstraints({ make in
             make.top.equalTo(wifiTitle.snp.bottom).offset(2)
             make.leading.trailing.bottom.equalToSuperview().inset(17)
-            make.bottom.equalToSuperview().inset(14)
         })
         
         scrollView.addSubview(qrCodeContainer)
@@ -261,6 +261,7 @@ final class EventInfoView: UIView {
             make.top.equalTo(containerView.snp.bottom).offset(17)
             make.width.height.equalTo(170)
             make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(20) // Ensuring the scrollView content size
         })
         
         qrCodeContainer.addSubview(qrCodeImageView)
