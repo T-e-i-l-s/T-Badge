@@ -30,6 +30,10 @@
 		D44546702C3D562800E32C14 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466B2C3D562800E32C14 /* NetworkService.swift */; };
 		D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445466C2C3D562800E32C14 /* ServiceProtocol.swift */; };
 		D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44546732C3D6C2700E32C14 /* AuthStubs.swift */; };
+		D45227E52C405279000288B6 /* EventInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45227E42C405279000288B6 /* EventInfoViewCell.swift */; };
+		D45227E82C4052A1000288B6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45227E72C4052A1000288B6 /* HomeView.swift */; };
+		D45227EA2C4052B7000288B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45227E92C4052B7000288B6 /* HomeViewController.swift */; };
+		D4537E642C4050EF00956154 /* TabBarConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4537E632C4050EF00956154 /* TabBarConroller.swift */; };
 		D49756A42C3EC0F00074648D /* AchievementCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */; };
 		D49756A62C3F085B0074648D /* UserStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49756A52C3F085B0074648D /* UserStubs.swift */; };
 		D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B0AE742C3703EF008435BF /* SignInController.swift */; };
@@ -40,10 +44,6 @@
 		D4C122DF2C39B4E600DD35D3 /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C122DE2C39B4E600DD35D3 /* EventInfoViewController.swift */; };
 		D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */; };
 		D4C6E8D82C3A807400CBA8E4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */; };
-		D4E16CD72C3D44F6003057A1 /* EventInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E16CD42C3D44F6003057A1 /* EventInfoViewCell.swift */; };
-		D4E16CD82C3D44F6003057A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E16CD52C3D44F6003057A1 /* HomeView.swift */; };
-		D4E16CD92C3D44F6003057A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E16CD62C3D44F6003057A1 /* HomeViewController.swift */; };
-		D4E16CDB2C3D4505003057A1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E16CDA2C3D4505003057A1 /* TabBarController.swift */; };
 		D4E3FDE52C3C58FA00CA785F /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3FDE42C3C58FA00CA785F /* EventModel.swift */; };
 		D4E3FDE82C3C599F00CA785F /* EventsStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3FDE72C3C599F00CA785F /* EventsStubs.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +86,10 @@
 		D445466B2C3D562800E32C14 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D445466C2C3D562800E32C14 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		D44546732C3D6C2700E32C14 /* AuthStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStubs.swift; sourceTree = "<group>"; };
+		D45227E42C405279000288B6 /* EventInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewCell.swift; sourceTree = "<group>"; };
+		D45227E72C4052A1000288B6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D45227E92C4052B7000288B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D4537E632C4050EF00956154 /* TabBarConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConroller.swift; sourceTree = "<group>"; };
 		D49756A32C3EC0F00074648D /* AchievementCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionView.swift; sourceTree = "<group>"; };
 		D49756A52C3F085B0074648D /* UserStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStubs.swift; sourceTree = "<group>"; };
 		D4B0AE742C3703EF008435BF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
@@ -96,10 +100,6 @@
 		D4C122DE2C39B4E600DD35D3 /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		D4C6E8D52C3A806800CBA8E4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D4C6E8D72C3A807400CBA8E4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		D4E16CD42C3D44F6003057A1 /* EventInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoViewCell.swift; sourceTree = "<group>"; };
-		D4E16CD52C3D44F6003057A1 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D4E16CD62C3D44F6003057A1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D4E16CDA2C3D4505003057A1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../../../../../../../.Trash/Controllers/MainFlow/TabNavigation/TabBarController.swift; sourceTree = "<group>"; };
 		D4E3FDE42C3C58FA00CA785F /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		D4E3FDE72C3C599F00CA785F /* EventsStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStubs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,6 +243,16 @@
 			path = AuthFlow;
 			sourceTree = "<group>";
 		};
+		D45227E32C405261000288B6 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				D45227E42C405279000288B6 /* EventInfoViewCell.swift */,
+				D45227E72C4052A1000288B6 /* HomeView.swift */,
+				D45227E92C4052B7000288B6 /* HomeViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		D4B0AE732C3703B6008435BF /* SignInFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,17 +293,6 @@
 			path = AccountPage;
 			sourceTree = "<group>";
 		};
-		D4E16CD32C3D44F6003057A1 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				D4E16CD42C3D44F6003057A1 /* EventInfoViewCell.swift */,
-				D4E16CD52C3D44F6003057A1 /* HomeView.swift */,
-				D4E16CD62C3D44F6003057A1 /* HomeViewController.swift */,
-			);
-			name = HomePage;
-			path = ../../../../../../../.Trash/Controllers/MainFlow/TabNavigation/HomePage;
-			sourceTree = "<group>";
-		};
 		D4E3FDE12C3C587F00CA785F /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,9 +314,9 @@
 		D4FF1F842C388395008F4D63 /* TabNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				D4E16CDA2C3D4505003057A1 /* TabBarController.swift */,
+				D45227E32C405261000288B6 /* HomePage */,
 				D4C6E8D42C3A804700CBA8E4 /* AccountPage */,
-				D4E16CD32C3D44F6003057A1 /* HomePage */,
+				D4537E632C4050EF00956154 /* TabBarConroller.swift */,
 			);
 			path = TabNavigation;
 			sourceTree = "<group>";
@@ -399,8 +398,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45227EA2C4052B7000288B6 /* HomeViewController.swift in Sources */,
 				D445466D2C3D562800E32C14 /* UserService.swift in Sources */,
-				D4E16CD82C3D44F6003057A1 /* HomeView.swift in Sources */,
 				528D8F1A2C32F28C00044B79 /* FlowCoordinator.swift in Sources */,
 				528D8F2B2C32F76F00044B79 /* LoginViewController.swift in Sources */,
 				D4C122DA2C39724600DD35D3 /* CreateEventView.swift in Sources */,
@@ -410,26 +409,26 @@
 				528D8F442C3685D000044B79 /* KeychainManager.swift in Sources */,
 				D4E3FDE52C3C58FA00CA785F /* EventModel.swift in Sources */,
 				D4C6E8D62C3A806800CBA8E4 /* AccountViewController.swift in Sources */,
+				D45227E52C405279000288B6 /* EventInfoViewCell.swift in Sources */,
 				528D8F1C2C32F2BF00044B79 /* AppCoordinator.swift in Sources */,
 				D49756A62C3F085B0074648D /* UserStubs.swift in Sources */,
 				528D8F1E2C32F2CB00044B79 /* AppAssemble.swift in Sources */,
 				D42F4EFD2C381ED20085ECCA /* SignInUserInfo.swift in Sources */,
 				D4E3FDE82C3C599F00CA785F /* EventsStubs.swift in Sources */,
 				D4B0AE782C3705E8008435BF /* LoginUserInfo.swift in Sources */,
-				D4E16CD72C3D44F6003057A1 /* EventInfoViewCell.swift in Sources */,
 				D445466E2C3D562800E32C14 /* AuthenticationService.swift in Sources */,
 				D441630A2C3C62EB00709BB6 /* InfoListSection.swift in Sources */,
 				D4C122DD2C39B4D800DD35D3 /* EventInfoView.swift in Sources */,
 				D44546712C3D562800E32C14 /* ServiceProtocol.swift in Sources */,
-				D4E16CD92C3D44F6003057A1 /* HomeViewController.swift in Sources */,
+				D45227E82C4052A1000288B6 /* HomeView.swift in Sources */,
 				D42F4EFB2C381CA90085ECCA /* SignInView.swift in Sources */,
 				D44163082C3C606700709BB6 /* InfoList.swift in Sources */,
 				D44546742C3D6C2700E32C14 /* AuthStubs.swift in Sources */,
 				D4B0AE752C3703EF008435BF /* SignInController.swift in Sources */,
 				D4C122D82C39723700DD35D3 /* CreateEventViewController.swift in Sources */,
+				D4537E642C4050EF00956154 /* TabBarConroller.swift in Sources */,
 				D42F4EF92C37F8020085ECCA /* LoginView.swift in Sources */,
 				D4C122DF2C39B4E600DD35D3 /* EventInfoViewController.swift in Sources */,
-				D4E16CDB2C3D4505003057A1 /* TabBarController.swift in Sources */,
 				528D8F032C32EF2A00044B79 /* AppDelegate.swift in Sources */,
 				D44546702C3D562800E32C14 /* NetworkService.swift in Sources */,
 				528D8F052C32EF2A00044B79 /* SceneDelegate.swift in Sources */,
