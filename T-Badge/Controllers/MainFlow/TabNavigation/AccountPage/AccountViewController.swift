@@ -28,11 +28,12 @@ final class AccountViewController: UIViewController {
         rootView.accountIconBackground.isHidden = true
         title = "Профиль"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.minus"), style: .plain, target: self, action: #selector(logoutButtonTap))
+        loadUserData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadUserData()
+        //loadUserData()
     }
     
     @objc private func logoutButtonTap() {
@@ -40,7 +41,7 @@ final class AccountViewController: UIViewController {
         updateAuth()
     }
     
-    private func loadUserData() {
+    func loadUserData() {
         guard let token = KeychainManager.shared.getKey() else {
             return
         }

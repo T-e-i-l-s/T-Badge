@@ -2,14 +2,15 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    private lazy var homeController: UIViewController = {
-        let view = UINavigationController(rootViewController: HomeViewController())
+    private lazy var homeController: UINavigationController = {
+        let vc = HomeViewController()
+        let view = UINavigationController(rootViewController: vc)
         view.tabBarItem.title = "События"
         view.tabBarItem.image = UIImage(systemName: "house")
         return view
     }()
     
-    private lazy var profileController: UIViewController = {
+    private lazy var profileController: UINavigationController = {
         let view = UINavigationController(rootViewController: AccountViewController(authManager: authManager, updateAuth: updateAuth))
         view.tabBarItem.title = "Профиль"
         view.tabBarItem.image = UIImage(systemName: "person.crop.circle")
@@ -32,6 +33,19 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setViewControllers([homeController, profileController], animated: true)
+        
+        let vc1 = AccountViewController(authManager: authManager, updateAuth: updateAuth)
+        let view1 = UINavigationController(rootViewController: vc1)
+        view1.tabBarItem.title = "Профиль"
+        view1.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+        
+        
+        let vc2 = HomeViewController()
+        vc2.accountViewController = vc1
+        let view2 = UINavigationController(rootViewController: vc2)
+        view2.tabBarItem.title = "События"
+        view2.tabBarItem.image = UIImage(systemName: "house")
+        
+        self.setViewControllers([view2, view1], animated: true)
     }
 }

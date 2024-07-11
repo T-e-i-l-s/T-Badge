@@ -5,6 +5,8 @@ import SnapKit
 final class HomeViewController: UIViewController {
     private lazy var rootView = view as! HomeView
     
+    weak var accountViewController: AccountViewController?
+    
     override func loadView() {
         super.loadView()
         view = HomeView()
@@ -70,21 +72,21 @@ final class HomeViewController: UIViewController {
         }
         startAnimation()
         EventsStubs(authToken: token).visitEvent(index: answer) { [weak self] res in
-            guard let self = self else { return }
             if res {
+                self?.accountViewController?.loadUserData()
                 EventsStubs(authToken: token).getEvents(result: { events in
                     DispatchQueue.main.async {
-                        self.stopAnimation()
+                        self?.stopAnimation()
                         if let eventsList = events {
-                            self.rootView.eventsList = eventsList
-                            self.rootView.tableView.reloadData()
+                            self?.rootView.eventsList = eventsList
+                            self?.rootView.tableView.reloadData()
                         }
                     }
                 })
             } else {
                 DispatchQueue.main.async {
-                    self.stopAnimation()
-                    self.showAlert()
+                    self?.stopAnimation()
+                    self?.showAlert()
                 }
             }
         }
@@ -102,10 +104,12 @@ final class HomeViewController: UIViewController {
         rootView.spinner.startAnimating()
         rootView.emptyLabel.alpha = 0
         rootView.tableView.alpha = 0
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     private func stopAnimation() {
         rootView.spinner.stopAnimating()
+        navigationItem.rightBarButtonItem?.isEnabled = true
         UIView.animate(withDuration: 0.2) {
             self.rootView.emptyLabel.alpha = 1
             self.rootView.tableView.alpha = 1

@@ -246,9 +246,9 @@
 		D45227E32C405261000288B6 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				D45227E92C4052B7000288B6 /* HomeViewController.swift */,
 				D45227E42C405279000288B6 /* EventInfoViewCell.swift */,
 				D45227E72C4052A1000288B6 /* HomeView.swift */,
-				D45227E92C4052B7000288B6 /* HomeViewController.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
