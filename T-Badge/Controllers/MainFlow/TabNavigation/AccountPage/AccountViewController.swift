@@ -44,16 +44,30 @@ final class AccountViewController: UIViewController {
         guard let token = KeychainManager.shared.getKey() else {
             return
         }
-        rootView.spinner.startAnimating()
+        startLoad()
         
         UserStubs(authToken: token).getEvents(result: { [weak self] userInfo in
             DispatchQueue.main.async {
-                self?.rootView.spinner.stopAnimating()
+                self?.finishLoad()
                 self?.rootView.accountIconBackground.isHidden = false
                 if let userInfo = userInfo {
                     self?.rootView.userInfo = userInfo
                 }
             }
         })
+    }
+    
+    private func startLoad() {
+        self.rootView.userInfoView.alpha = 0
+        self.rootView.achievementsView.alpha = 0
+        rootView.spinner.startAnimating()
+    }
+    
+    private func finishLoad() {
+        rootView.spinner.stopAnimating()
+        UIView.animate(withDuration: 0.2) {
+            self.rootView.userInfoView.alpha = 1
+            self.rootView.achievementsView.alpha = 1
+        }
     }
 }

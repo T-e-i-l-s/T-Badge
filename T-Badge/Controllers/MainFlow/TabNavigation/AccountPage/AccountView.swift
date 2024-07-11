@@ -131,12 +131,6 @@ final class AccountView: UIView {
             make.leading.equalTo(accountIconBackground.snp.trailing).offset(14)
             make.trailing.equalToSuperview().inset(14)
         }
-        
-//        userInfoView.addSubview(spinner)
-//        spinner.snp.makeConstraints{ make in
-//            make.center.equalToSuperview()
-//        }
-        
         addSubview(achievementsView)
         achievementsView.snp.makeConstraints { make in
             make.top.equalTo(userInfoView.snp.bottom).offset(17)
@@ -157,6 +151,11 @@ final class AccountView: UIView {
         
         achievmentsCollectionView.addSubview(emptyListLabel)
         emptyListLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
+        addSubview(spinner)
+        spinner.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
         
