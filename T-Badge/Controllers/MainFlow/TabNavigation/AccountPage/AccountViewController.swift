@@ -27,17 +27,33 @@ final class AccountViewController: UIViewController {
         super.viewDidLoad()
         title = "Профиль"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.minus"), style: .plain, target: self, action: #selector(logoutButtonTap))
-        UserStubs().getEvents(result: { [weak self] userInfo in
-            DispatchQueue.main.async {
-                if let userInfo = userInfo {
-                    self?.rootView.userInfo = userInfo
-                }
-            }
-        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadUserData()
     }
     
     @objc private func logoutButtonTap() {
         authManager.changeStatus(.notAuth)
         updateAuth()
+    }
+    
+    private func loadUserData() {
+        guard let token = KeychainManager.shared.getKey() else {
+            return
+        }
+        rootView.spinner.startAnimating()
+        rootView.accountIconBackground.isHidden = true
+        
+        UserStubs(authToken: token).getEvents(result: { [weak self] userInfo in
+            DispatchQueue.main.async {
+                self?.rootView.spinner.stopAnimating()
+                self?.rootView.accountIconBackground.isHidden = false
+                if let userInfo = userInfo {
+                    self?.rootView.userInfo = userInfo
+                }
+            }
+        })
     }
 }

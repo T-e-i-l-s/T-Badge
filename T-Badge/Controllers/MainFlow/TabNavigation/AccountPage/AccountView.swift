@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+
 final class AccountView: UIView {
     var userInfo: UserInfo = UserInfo(name: "", achievements: []) {
         didSet {
@@ -20,6 +21,12 @@ final class AccountView: UIView {
         super.init(coder: coder)
         setupUI()
     }
+    
+    lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.hidesWhenStopped = true
+        return spinner
+    }()
     
     var userInfoView: UIView = {
         let v = UIView()
@@ -70,13 +77,22 @@ final class AccountView: UIView {
         return l
     }()
     
+    lazy var emptyListLabel: UILabel = {
+        let l = UILabel()
+        l.text = "Нет достижений"
+        l.textColor = .label
+        l.numberOfLines = 0
+        l.textAlignment = .center
+        l.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        return l
+    }()
     
     private func setupUI() {
         backgroundColor = .systemBackground
         
         addSubview(userInfoView)
         userInfoView.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(17)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(10)
             make.leading.trailing.equalToSuperview().inset(17)
         }
         
@@ -100,6 +116,10 @@ final class AccountView: UIView {
             make.trailing.equalToSuperview().inset(14)
         }
         
+//        userInfoView.addSubview(spinner)
+//        spinner.snp.makeConstraints{ make in
+//            make.center.equalToSuperview()
+//        }
         
         addSubview(achievementsView)
         achievementsView.snp.makeConstraints { make in
@@ -118,11 +138,23 @@ final class AccountView: UIView {
             make.bottom.equalToSuperview().inset(17)
             make.leading.trailing.equalToSuperview().inset(17)
         }
+        
+        achievmentsCollectionView.addSubview(emptyListLabel)
+        emptyListLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
     }
     
     private func updateUI() {
         nameLabel.text = userInfo.name
         accountText.text = userInfo.name.prefix(1).uppercased()
         achievmentsCollectionView.configure(data: userInfo.achievements)
+        
+        if userInfo.achievements.isEmpty {
+            emptyListLabel.isHidden = false
+        } else {
+            emptyListLabel.isHidden = true
+        }
     }
 }

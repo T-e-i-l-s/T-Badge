@@ -27,8 +27,10 @@ final class AuthManager {
     
     private func checkAuth() {
         if KeychainManager.shared.getKey() != nil {
+            print(status)
             status = .auth
         } else {
+            print("no status")
             status = .notAuth
         }
     }
@@ -43,8 +45,7 @@ final class AuthManager {
             if let token = token {
                 KeychainManager.shared.saveKey(token)
                 status = newStatus
-                // TODO: added key to network service
-                // networkService.token = ...
+                print(newStatus)
             } else {
                 print("error AuthManager save key")
             }

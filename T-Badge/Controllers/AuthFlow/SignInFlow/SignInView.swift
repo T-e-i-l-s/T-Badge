@@ -27,42 +27,61 @@ final class SignInView: UIView {
         return spinner
     }()
     
+    lazy var welcomeLabel: UILabel = {
+        let l = UILabel()
+        l.text = "Рад знакомству 🤝"
+        l.textColor = .label
+        l.font = .systemFont(ofSize: 30, weight: .semibold)
+        l.textAlignment = .center
+        return l
+    }()
+    
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Ваше имя"
-        tf.backgroundColor = .tertiarySystemFill
-        tf.textColor = .label
-        tf.font = .systemFont(ofSize: 19)
-        tf.borderStyle = .roundedRect
+        tf.isSecureTextEntry = true
+        tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.leftViewMode = .always
+        tf.layer.cornerRadius = 13
+        tf.layer.cornerCurve = .continuous
+        tf.backgroundColor = .secondarySystemBackground
         return tf
     }()
     
     lazy var usernameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Логин"
-        tf.backgroundColor = .tertiarySystemFill
-        tf.textColor = .label
-        tf.font = .systemFont(ofSize: 19)
-        tf.borderStyle = .roundedRect
+        tf.isSecureTextEntry = true
+        tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.leftViewMode = .always
+        tf.layer.cornerRadius = 13
+        tf.layer.cornerCurve = .continuous
+        tf.backgroundColor = .secondarySystemBackground
         return tf
     }()
     
     lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Пароль"
-        tf.backgroundColor = .tertiarySystemFill
-        tf.textColor = .label
-        tf.font = .systemFont(ofSize: 19)
-        tf.borderStyle = .roundedRect
+        tf.isSecureTextEntry = true        
+        tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
+        tf.leftViewMode = .always
+        tf.layer.cornerRadius = 13
+        tf.layer.cornerCurve = .continuous
+        tf.backgroundColor = .secondarySystemBackground
         return tf
     }()
     
     lazy var acceptButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Зарегистрировать", for: .normal)
+        button.setTitle("Зарегистрироваться", for: .normal)
         button.backgroundColor = .systemBlue
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.layer.cornerRadius = 50
+        button.layer.cornerRadius = 13
+        button.layer.cornerCurve = .continuous
+        button.clipsToBounds = true
 
         var configuration = UIButton.Configuration.filled()
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
@@ -70,32 +89,42 @@ final class SignInView: UIView {
         
         return button
     }()
+
     
     private func setupUI() {
         backgroundColor = .systemBackground
+        
+        addSubview(welcomeLabel)
+        welcomeLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(50)
+            make.centerX.equalToSuperview()
+        }
         
         addSubview(usernameTextField)
         usernameTextField.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.centerY.equalToSuperview()
+            make.height.equalTo(50)
         }
         
         addSubview(nameTextField)
         nameTextField.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalTo(usernameTextField.snp.top).offset(-10)
+            make.bottom.equalTo(usernameTextField.snp.top).offset(-15)
+            make.height.equalTo(50)
         }
         
         addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(usernameTextField.snp.bottom).inset(-10)
+            make.top.equalTo(usernameTextField.snp.bottom).inset(-15)
+            make.height.equalTo(50)
         }
         
         addSubview(acceptButton)
         acceptButton.snp.makeConstraints{ make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(20)
         }
         
         addSubview(spinner)

@@ -34,6 +34,7 @@ class AuthStubs {
                         if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                             if let token = json["token"] as? String {
                                 result(token)
+                                print(token)
                             } else {
                                 result(nil)
                             }
@@ -87,6 +88,7 @@ class AuthStubs {
                         if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                             if let token = json["token"] as? String {
                                 result(token)
+                                print(token)
                             } else {
                                 result(nil)
                             }

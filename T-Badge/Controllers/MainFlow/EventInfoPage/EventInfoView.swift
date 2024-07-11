@@ -50,7 +50,7 @@ final class EventInfoView: UIView {
         infoList.configure(data: [
             "Описание": event.description,
             "Место": event.place,
-            "Сроки": "\(event.start) - \(event.end)"
+            "Сроки": "\(formatUnixTime(event.start)) - \(formatUnixTime(event.end))"
         ])
         
         scrollView.addSubview(infoList)
@@ -73,5 +73,14 @@ final class EventInfoView: UIView {
             make.width.height.equalTo(150)
             make.center.equalToSuperview()
         })
+    }
+    
+    private func formatUnixTime(_ unixTime: Int64) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(unixTime))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        return dateFormatter.string(from: date)
     }
 }

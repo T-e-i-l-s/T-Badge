@@ -68,10 +68,18 @@ class AchievementCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.layer.cornerRadius = 10
         iv.clipsToBounds = true
         return iv
+    }()
+    
+    private let emojiView: UILabel = {
+        let l = UILabel()
+        l.textAlignment = .center
+        l.font = UIFont.systemFont(ofSize: 60)
+        l.numberOfLines = 1
+        return l
     }()
     
     private let nameLabel: UILabel = {
@@ -85,8 +93,14 @@ class AchievementCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        contentView.addSubview(imageView)
-        imageView.snp.makeConstraints { make in
+//        contentView.addSubview(imageView)
+//        imageView.snp.makeConstraints { make in
+//            make.top.equalToSuperview()
+//            make.leading.trailing.equalToSuperview()
+//            make.height.equalTo(75)
+//        }
+        contentView.addSubview(emojiView)
+        emojiView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(75)
@@ -94,7 +108,7 @@ class AchievementCell: UICollectionViewCell {
         
         contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.top.equalTo(emojiView.snp.bottom).offset(5)
             make.leading.trailing.equalToSuperview()
         }
     }
@@ -104,7 +118,8 @@ class AchievementCell: UICollectionViewCell {
     }
     
     func configure(with achievement: AchievmentModel) {
-        imageView.image = UIImage(named: achievement.image)
+//        imageView.image = UIImage(named: achievement.image)
+        emojiView.text = achievement.image
         nameLabel.text = achievement.name
     }
 }

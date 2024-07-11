@@ -42,6 +42,7 @@ final class SignInController: UIViewController {
                 
                 if token != nil {
                     self?.authManager.changeStatus(.auth, token: token)
+                    self?.updateAuth()
                 } else {
                     self?.showAlert()
                 }
