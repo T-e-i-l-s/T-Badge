@@ -30,19 +30,21 @@ final class SignInController: UIViewController {
     }
     
     @objc func acceptButtonClick () {
-        rootView.spinner.startAnimating()
+        
         
         let name = rootView.nameTextField.text ?? ""
         let username = rootView.usernameTextField.text ?? ""
         let password = rootView.passwordTextField.text ?? ""
         
+        loadingStart()
         AuthStubs().createAccount(name: name, username: username, password: password, result: { [weak self] token in
             DispatchQueue.main.async {
-                self?.rootView.spinner.stopAnimating()
+                
+                self?.loadingFinish()
                 
                 if token != nil {
+                    self?.loadingFinish()
                     self?.authManager.changeStatus(.auth, token: token)
-                    self?.updateAuth()
                 } else {
                     self?.showAlert()
                 }
@@ -51,10 +53,28 @@ final class SignInController: UIViewController {
     }
     
     private func showAlert() {
-        let ac = UIAlertController(title: "Ошибка регистрации", message: "Неверный формат данных", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Ошибка регистрации", message: "Придумайте другие данные", preferredStyle: .alert)
         let submitAction = UIAlertAction(title: "Понятно", style: .default)
         ac.addAction(submitAction)
         present(ac, animated: true)
+    }
+    
+    private func loadingStart() {
+        rootView.spinner.startAnimating()
+        rootView.nameTextField.isHidden = true
+        rootView.passwordTextField.isHidden = true
+        rootView.usernameTextField.isHidden = true
+        rootView.acceptButton.isEnabled = false
+        navigationItem.backBarButtonItem?.isEnabled = false
+    }
+    
+    private func loadingFinish() {
+        rootView.spinner.stopAnimating()
+        rootView.nameTextField.isHidden = false
+        rootView.passwordTextField.isHidden = false
+        rootView.usernameTextField.isHidden = false
+        rootView.acceptButton.isEnabled = true
+        navigationItem.backBarButtonItem?.isEnabled = true
     }
     
 }
