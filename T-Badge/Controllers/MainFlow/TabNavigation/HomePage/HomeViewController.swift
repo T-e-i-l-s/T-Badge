@@ -42,7 +42,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func requestEvents() {
-        rootView.spinner.startAnimating()
+        startAnimation()
         
         guard let token = KeychainManager.shared.getKey() else {
             return
@@ -50,17 +50,13 @@ final class HomeViewController: UIViewController {
         
         EventsStubs(authToken: token).getEvents(result: { [weak self] events in
             DispatchQueue.main.async {
-                self?.rootView.spinner.stopAnimating()
+                self?.stopAnimation()
                 if let eventsList = events {
                     self?.rootView.eventsList = eventsList
                     self?.rootView.tableView.reloadData()
                 }
             }
         })
-    }
-    
-    private func requestBadge(code: String) {
-        // request to server
     }
     
     public func openEventInfo(id: Int) {
@@ -72,11 +68,13 @@ final class HomeViewController: UIViewController {
         guard let token = KeychainManager.shared.getKey() else {
             return
         }
+        startAnimation()
         EventsStubs(authToken: token).visitEvent(index: answer) { [weak self] res in
             guard let self = self else { return }
             if res {
                 EventsStubs(authToken: token).getEvents(result: { events in
                     DispatchQueue.main.async {
+                        self.stopAnimation()
                         if let eventsList = events {
                             self.rootView.eventsList = eventsList
                             self.rootView.tableView.reloadData()
@@ -85,6 +83,7 @@ final class HomeViewController: UIViewController {
                 })
             } else {
                 DispatchQueue.main.async {
+                    self.stopAnimation()
                     self.showAlert()
                 }
             }
@@ -97,5 +96,19 @@ final class HomeViewController: UIViewController {
         let submitAction = UIAlertAction(title: "Понятно", style: .default)
         ac.addAction(submitAction)
         present(ac, animated: true)
+    }
+    
+    private func startAnimation() {
+        rootView.spinner.startAnimating()
+        rootView.emptyLabel.alpha = 0
+        rootView.tableView.alpha = 0
+    }
+    
+    private func stopAnimation() {
+        rootView.spinner.stopAnimating()
+        UIView.animate(withDuration: 0.2) {
+            self.rootView.emptyLabel.alpha = 1
+            self.rootView.tableView.alpha = 1
+        }
     }
 }
