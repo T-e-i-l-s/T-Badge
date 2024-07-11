@@ -39,7 +39,6 @@ final class SignInView: UIView {
     lazy var nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Ваше имя"
-        tf.isSecureTextEntry = true
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
         tf.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
         tf.leftViewMode = .always
@@ -52,7 +51,6 @@ final class SignInView: UIView {
     lazy var usernameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Логин"
-        tf.isSecureTextEntry = true
         tf.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
         tf.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: tf.frame.height))
         tf.leftViewMode = .always
