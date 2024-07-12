@@ -1,5 +1,7 @@
 import Foundation
 
+let url = "http://147.45.253.29/api"
+
 class EventsStubs {
     let authToken: String
     
@@ -8,7 +10,7 @@ class EventsStubs {
     }
     
     func getEvents(result: @escaping ([EventModel]?) -> ()) {
-        guard let url = URL(string: "https://t-badge.onrender.com/api/users/me") else {
+        guard let url = URL(string: "\(url)/users/me") else {
             print("Invalid URL")
             return
         }
@@ -62,7 +64,7 @@ class EventsStubs {
     
     func visitEvent(index: String, result: @escaping (Bool) -> ()) {
         guard let url = URL(
-            string: "https://t-badge.onrender.com/api/users/visit/\(index)"
+            string: "\(url)/users/visit/\(index)"
         ) else {
             print("Invalid URL")
             result(false)

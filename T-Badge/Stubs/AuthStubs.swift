@@ -1,7 +1,7 @@
 import Foundation
 class AuthStubs {
     func checkAccess(username: String, password: String, result: @escaping (String?) -> ()) {
-        guard let url = URL(string: "https://t-badge.onrender.com/api/users/login") else {
+        guard let url = URL(string: "\(url)/users/login") else {
             print("Invalid URL")
             return
         }
@@ -56,7 +56,7 @@ class AuthStubs {
     
     
     func createAccount(name: String, username: String, password: String, result: @escaping (String?) -> ()) {
-        guard let url = URL(string: "https://t-badge.onrender.com/api/users/register") else {
+        guard let url = URL(string: "\(url)/users/register") else {
             print("Invalid URL")
             return
         }

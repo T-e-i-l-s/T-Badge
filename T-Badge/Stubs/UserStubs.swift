@@ -8,7 +8,7 @@ class UserStubs {
     }
     
     func getEvents(result: @escaping (UserInfo?) -> ()) {
-        guard let url = URL(string: "https://t-badge.onrender.com/api/users/me") else {
+        guard let url = URL(string: "\(url)/users/me") else {
             print("Invalid URL")
             return
         }
